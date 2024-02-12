@@ -9,20 +9,20 @@ public class Test02_test {
 			System.out.println("(1,1,1)");
 		}
 		else {
-			for(int i = 1 ; i<(n-10); i++) {
+			for(int i = 1 ; i<10; i++) {
 				int a = n-10-(2*i);
-				if((a==0) && (i<11)) {
+				if(a==0) {
 					System.out.println("("+(i+1)+", 1, 1)");
 				}
 				else {
-					for(int j=1; j<a; j++) {
+					for(int j=1; j<10; j++) {
 						int b=a-(3*j);
-						if((b==0) && (j<11)) {
+						if((b==0)) {
 							System.out.println("("+(i+1)+", "+(j+1)+", 1)");
 						}
-						for(int k=1; k<b; k++) {
+						for(int k=1; k<10; k++) {
 							int c=b-(5*k);
-							if((c==0) && (k<11)) {
+							if((c==0)) {
 								System.out.println("("+(i+1)+", "+(j+1)+", "+(k+1)+")");
 								break;
 							}
