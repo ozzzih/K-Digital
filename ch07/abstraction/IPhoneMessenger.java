@@ -1,6 +1,6 @@
 package com.ruby.java.ch07.abstraction;
 
-public class IPhoneMessenger implements Messenger{
+public class IPhoneMessenger extends GraphicIOS implements Messenger{
 	public String getMessage() { //추상메서드 정의
 		return "iPhone";
 	}
