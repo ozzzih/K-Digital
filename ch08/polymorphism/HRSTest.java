@@ -4,11 +4,13 @@ abstract class Employee{
 	String name;
 	int salary;
 	
+	
 	public abstract double calcSalary();
 	public abstract void calcBonus();
 }
 
 class Salesman extends Employee{
+	int annual_sales;//연간 판매 실적
 	public double calcSalary() {
 		System.out.println("Salesman 급여 = 기본급 + 판매 수당");
 		return 500;
@@ -19,6 +21,7 @@ class Salesman extends Employee{
 }
 
 class Consultant extends Employee{
+	int num_project; //컨설팅 참여 수 
 	public double calcSalary() {
 		System.out.println("Consultant 급여 = 기본급 + 팀 성과 수당");
 		return 800;
@@ -29,6 +32,7 @@ class Consultant extends Employee{
 }
 
 class Manager extends Employee{
+	int num_team; //관리 팀 수 
 	public double calcSalary() {
 		System.out.println("Manager 급여 = 기본급 + 팀 성과 수당");
 		return 1000;
