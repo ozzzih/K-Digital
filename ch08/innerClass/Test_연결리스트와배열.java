@@ -1,7 +1,5 @@
 package com.ruby.java.ch08.innerClass;
 
-import com.ruby.java.ch08.innerClass.MyLinkedList.Node;
-
 class Node3 {
 	int data;
 	Node3 link;
@@ -17,7 +15,7 @@ class LinkedList3 {
 		Node3 p = first;
 		Node3 newNode = new Node3(data); //Node(data)의 주소를 가리키는 중
 		if(p == null) { //맨처음이냐
-			p = newNode; //방금 생성된 노드를 첫번째로 지정
+			first= newNode; //방금 생성된 노드를 첫번째로 지정
 		}else {//이미 있다면
 			Node3 next=p;
 			while(next.link != null) {
@@ -31,8 +29,7 @@ class LinkedList3 {
 	}
 	void showList() {
 		System.out.println();
-		Node3 p=first;
-		
+		Node3 p = first;
 		if(p == null) {
 			System.out.println("등록된 데이터가 없습니다.");
 		}else {
@@ -47,19 +44,19 @@ class LinkedList3 {
 	}
 	void insert(int data) {
 		Node3 newNode = new Node3(data);
-		Node3 p = first, q = null;
-		//여기에 크기비교하는 반복문 넣어야함.
-		if(p == null) { //맨처음이냐
-			p = newNode; //방금 생성된 노드를 첫번째로 지정
-		}else {//이미 있다면
-			Node3 next=p;
-			while(next.link != null) {
-				next = next.link;
-			}//마지막 노드의 link에 도달
-			next.link = newNode;
-		}
-		
-
+		Node3 p = first;
+        if (p.data >= newNode.data) {
+            newNode.link = p;
+            first = newNode;
+            
+        } else {
+            Node3 current = p;
+            while (current.link != null && current.link.data < newNode.data) {
+                current = current.link;
+            }
+            newNode.link = current.link;
+            current.link = newNode;
+        }
 	}
 }
 
@@ -89,7 +86,6 @@ public class Test_연결리스트와배열 {
 		while(x>=data[idx]) {
 			idx++;
 		}
-		System.out.println(idx);
 		int arr[]=new int[count-idx+1]; //7-3+1
 		for(int i=idx; i<count; i++) {
 			
@@ -106,25 +102,21 @@ public class Test_연결리스트와배열 {
 	}
 	
 
-public static void main(String[] args) {
-	int[]list = new int[10];
-	int count = 0;
-	System.out.println("배열로 리스트::");
-	count = getList(list);
-	System.out.println(count);
-	showList(list);
-	count = insertList(list, count, 3);
-	System.out.println(count);
-	showList(list);
-	count = insertList(list, count, 7);
-	System.out.println(count);
-	showList(list);
-	
-	LinkedList3 ll = new LinkedList3();
-	ll.append(5);ll.append(10);ll.append(15);ll.append(20);ll.append(25);
-	ll.showList();
-	ll.insert(3);ll.showList();
-	ll.insert(7);ll.showList();
+	public static void main(String[] args) {
+		int[]list = new int[10];
+		int count = 0;
+		System.out.println("배열로 리스트::");
+		count = getList(list);
+		showList(list);
+		count = insertList(list, count, 3);
+		showList(list);
+		count = insertList(list, count, 7);
+		showList(list);
+		
+		LinkedList3 ll = new LinkedList3();
+		ll.append(5);ll.append(10);ll.append(15);ll.append(20);ll.append(25);
+		ll.showList();
+		ll.insert(3);ll.showList();
+		ll.insert(7);ll.showList();
+	}
 }
-}
-
