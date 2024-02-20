@@ -12,16 +12,16 @@ class Node3 {
 class LinkedList3 {
 	Node3 first; 
 	void append(int data) {
-		Node3 p = first;
+		Node3 p = first; Node3 q = null;
 		Node3 newNode = new Node3(data); //Node(data)의 주소를 가리키는 중
 		if(p == null) { //맨처음이냐
 			first= newNode; //방금 생성된 노드를 첫번째로 지정
 		}else {//이미 있다면
-			Node3 next=p;
-			while(next.link != null) {
-				next = next.link;
+			q=p;
+			while(q.link != null) {
+				q = q.link;
 			}//마지막 노드의 link에 도달
-			next.link = newNode;
+			q.link = newNode;
 		}
 		
 
@@ -29,33 +29,33 @@ class LinkedList3 {
 	}
 	void showList() {
 		System.out.println();
-		Node3 p = first;
+		Node3 p = first; Node3 q=null;
 		if(p == null) {
 			System.out.println("등록된 데이터가 없습니다.");
 		}else {
 			System.out.println("등록된 데이터는 다음과 같습니다.");
-			Node3 next = p;
-			while(next!=null) {
-				System.out.println(next.data);
-				next=next.link;
+			q = p;
+			while(q!=null) {
+				System.out.println(q.data);
+				q=q.link;
 			}
 		}
 
 	}
 	void insert(int data) {
 		Node3 newNode = new Node3(data);
-		Node3 p = first;
+		Node3 p = first; Node3 q = null;
         if (p.data >= newNode.data) {
             newNode.link = p;
             first = newNode;
             
         } else {
-            Node3 current = p;
-            while (current.link != null && current.link.data < newNode.data) {
-                current = current.link;
+            q = p;
+            while (q.link != null && q.link.data < newNode.data) {
+                q = q.link;
             }
-            newNode.link = current.link;
-            current.link = newNode;
+            newNode.link = q.link;
+            q.link = newNode;
         }
 	}
 }
