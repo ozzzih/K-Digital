@@ -1,0 +1,85 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: "Do Hyeon", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    
+    
+}
+main{
+    width: 60%;
+    background: linear-gradient(rgb(214, 199, 199), rgb(226, 122, 122)), url('/image/winter.jpg') ;
+    background-size: cover;
+    /* 그림이 바둑판처럼 안나오도록 */
+    background-position: center;
+    margin-left: 20%;
+}
+section{
+    background-color: white;
+    margin: 20px;
+    padding: 10px;
+
+}
+header>h1{
+    text-align: center;
+}
+nav>ul{
+    display: flex;
+    margin: 20px;
+    padding: 10px;
+    list-style: none;
+    justify-content: right;
+
+
+}
+nav li{
+    margin: 5px;
+    padding: 10px;
+    background-color: rgb(199, 40, 66);
+    color: white;
+    border-radius: 5px;
+    font-family: "Fredoka", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400px;
+    font-style: normal;
+    font-variation-settings:
+        "wdth" 100;
+}
+article{
+    padding: 50px;
+}
+article p{
+    margin: 20px;
+}
+section{
+    border-radius: 5px;
+}
+section h1{
+    text-align: center;
+    font-size: 2rem;
+}
+section>div{
+    display: flex;
+    margin-top: 20px;
+    align-items: center;
+}
+section img{
+    border-radius: 50%;
+}
+section p{
+    margin-left: 20px;
+    font-size: 20px;
+}
+
+footer li{
+    list-style: none;
+}
+footer{
+    background-color: black;
+    color: white;
+    padding: 10px;
+    font-weight: 200px;
+    font-size: 15px;
+    text-align: right;
+}
