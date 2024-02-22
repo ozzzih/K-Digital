@@ -54,7 +54,7 @@ class LinkedList3 {
             while (q.link != null && q.link.data < newNode.data) {
                 q = q.link;
             }
-            newNode.link = q.link;
+            newNode.link = q.link;  
             q.link = newNode;
         }
 	}
