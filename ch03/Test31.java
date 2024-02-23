@@ -1,4 +1,4 @@
-package edu;
+package com.ruby.java.ch03;
 
 public class Test31 {
 
