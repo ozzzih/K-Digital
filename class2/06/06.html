@@ -4,10 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../index.css">
-    <link rel="stylesheet" href="./05.css">
-    <script src="./05.js"></script>
+    <link rel="stylesheet" href="./06.css">
+    <script src="./06.js"></script>
     <link href="https://hangeul.pstatic.net/hangeul_static/css/NanumBarunGothicYetHangul.css" rel="stylesheet">
-    <title>05. 자바스크립트 주사위</title>
+    <title>06. 자바스크립트 주사위 게임</title>
 </head>
 <body>
     <main>
@@ -22,16 +22,24 @@
         </header>
         <section>
             <div>
-                <h1>🎲자바스크립트 주사위🎲</h1>
+                <h1>🎲자바스크립트 주사위 게임🎲</h1>
             </div>
             
             <div>
                 <img src="./img/1.png" class="c1">
                 <img src="./img/2.png" class="c1">
-                <img src="./img/3.png" class="c1">
             </div>
             <div>
-                <button onclick="handleClick()">▶ 이 곳을 클릭하세요 ◀</button>
+              
+                <button onclick="handleClick(1)">▶ 1</button>
+                <button onclick="handleClick(2)">▶ 2</button>
+                <button onclick="handleClick(3)">▶ 3</button>
+                <button onclick="handleClick(4)">▶ 4</button>
+                <button onclick="handleClick(5)">▶ 5</button>
+                <button onclick="handleClick(6)">▶ 6</button>
+            </div>
+            <div id="result">
+                
             </div>
 
         </section>

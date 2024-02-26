@@ -25,6 +25,9 @@ header{
 
 }
 
+header>h1{
+    padding: 30%;
+}
 
 article{
     display: flex;
@@ -72,10 +75,11 @@ section>h1{
 
 section>div{
     width: 80%;
-    display: flex;
+    
     justify-content: center;
     align-items: center;
     border: 1px dotted gray;
+    border-radius: 10px;
     padding: 20px;
     margin: 10px;
 }
