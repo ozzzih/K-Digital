@@ -11,9 +11,11 @@ public class GugudanTest {
 		System.out.println("-".repeat(15));
 		ggd.print(4);
 		System.out.println("-".repeat(15));
-		ggd.printall();
+		ggd.printHorizontal();
 		System.out.println("-".repeat(15));
-		ggd.print3();
+		ggd.printcolumn(3);
+		System.out.println("-".repeat(15));
+		ggd.printcolumn(4);
 		System.out.println("End");
 	}
 
