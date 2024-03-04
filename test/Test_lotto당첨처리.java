@@ -1,4 +1,4 @@
-package com.ruby.java.ch10.collection;
+package com.ruby.java.test;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;

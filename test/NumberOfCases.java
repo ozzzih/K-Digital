@@ -1,8 +1,8 @@
-package com.ruby.java.ch05;
+package com.ruby.java.test;
 
 import java.util.Scanner;
 
-public class Test02_test {
+public class NumberOfCases {
 	static String sumCase(int n) {
 		
 		if(n==10) {

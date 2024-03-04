@@ -1,4 +1,4 @@
-package com.ruby.java.ch11;
+package com.ruby.java.test;
 
 public class GugudanTest {
 
@@ -16,6 +16,11 @@ public class GugudanTest {
 		ggd.printcolumn(3);
 		System.out.println("-".repeat(15));
 		ggd.printcolumn(4);
+		System.out.println("-".repeat(15));
+		ggd.printcolumn(5);
+		System.out.println("-".repeat(15));
+		ggd.printcolumn(6);
+		System.out.println("End");
 		System.out.println("End");
 	}
 

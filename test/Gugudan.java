@@ -1,4 +1,4 @@
-package com.ruby.java.ch11;
+package com.ruby.java.test;
 
 public class Gugudan {
 

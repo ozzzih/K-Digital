@@ -1,4 +1,4 @@
-package com.ruby.java.ch05;
+package com.ruby.java.test;
 
 import java.util.Random;
 

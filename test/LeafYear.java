@@ -1,6 +1,6 @@
-package com.ruby.java.ch14;
+package com.ruby.java.test;
 
-public class Test_yun {
+public class LeafYear {
 	static void check(int year) {
 		if(((year%4==0)&(year%400==0))|((year%4==0)&(year%100!=0))) {
 			System.out.println(year+"년은 윤년입니다.");

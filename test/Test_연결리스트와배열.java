@@ -1,4 +1,4 @@
-package com.ruby.java.ch08.innerClass;
+package com.ruby.java.test;
 
 class Node3 {
 	int data;

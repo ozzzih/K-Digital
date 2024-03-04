@@ -1,5 +1,5 @@
 
-package com.ruby.java.ch06;
+package com.ruby.java.test;
 //하나의 java file에 Student 객체를 정의하고 구현하는 실습
 /*
 * static 멤버 함수 구현
