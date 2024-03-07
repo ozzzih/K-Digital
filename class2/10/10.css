@@ -1,0 +1,83 @@
+
+.row{
+    background-color: #eae0d5;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.head{
+    background-color: #5e503f;
+    color: white;
+    
+}
+
+#msg{
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+
+.num1{
+    background-color: aquamarine;
+    border-radius: 50%;
+    width: 30px;
+    margin: 10px;
+}
+.num2{
+    background-color: aquamarine;
+    border-radius: 50%;
+    width: 30px;
+    margin: 10px;
+}
+.num3{
+    background-color: aquamarine;
+    border-radius: 50%;
+    width: 30px;
+    margin: 10px;
+}
+.num4{
+    background-color: aquamarine;
+    border-radius: 50%;
+    width: 30px;
+    margin: 10px;
+}
+.num5{
+    background-color: aquamarine;
+    border-radius: 50%;
+    width: 30px;
+    margin: 10px;
+}
+.num6{
+    background-color: aquamarine;
+    border-radius: 50%;
+    width: 30px;
+    margin: 10px;
+}
+.num{
+    display: flex;
+    
+}
+
+.inrow{
+    margin-top: 10px;
+    
+    
+    
+}
+
+select{
+    display: inline-flex;
+    width: 90%;
+    height: 30px;
+    margin-left: 0px;
+}
+
+input[type='number']{
+    height: 40px;
+    margin-left: 1px;
+}
+button{
+    height: 45px;
+    width: 100px;
+}
