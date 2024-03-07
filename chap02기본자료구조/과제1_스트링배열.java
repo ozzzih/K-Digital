@@ -24,6 +24,4 @@ public class 과제1_스트링배열 {
 					swap(arr,i, j);
 			}
 	}
-	
-
 }

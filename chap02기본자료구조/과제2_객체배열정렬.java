@@ -15,11 +15,11 @@ class PhyscData implements Comparable<PhyscData>{
 	}
 	@Override
 	public String toString() {
-		return name;
+		return name+"의 키는 "+height+"cm이며, 시력은 "+vision+"이다.";
 	}
 	@Override
 	public int compareTo(PhyscData p) {
-		return this.name.compareTo(p.toString());
+		return this.name.compareTo(p.name);
 	}
 //	public int equals(PhyscData p) {
 //		
@@ -27,33 +27,33 @@ class PhyscData implements Comparable<PhyscData>{
 }
 public class 과제2_객체배열정렬 {
 	static void swap(PhyscData[]arr, int ind1, int ind2) {
-		
+		PhyscData t = arr[ind1]; arr[ind1]=arr[ind2]; arr[ind2]=t;
 	}
 	static void sortData(PhyscData []arr) {
 		System.out.println("<<<<<정렬시작>>>>>");
 		for(int i = 0; i<arr.length; i++)
 			for(int j=i+1; j<arr.length; j++)
-				if(arr[i].toString().compareTo(arr[j].toString())>0)
+				if(arr[i].compareTo(arr[j])>0)
 					swap(arr, i, j);
 	}
 	public static void main(String[] args) {
 		PhyscData[] data = {
-				new PhyscData("홍길동", 162, 0.3),
-				new PhyscData("홍동", 164, 1.3),
-				new PhyscData("홍길", 152, 0.7),
-				new PhyscData("김홍길동", 172, 0.3),
-				new PhyscData("이길동", 182, 0.6),
-				new PhyscData("박길동", 167, 0.2),
-				new PhyscData("최길동", 169, 0.5)
+			new PhyscData("홍길동", 162, 0.3),
+			new PhyscData("홍동", 164, 1.3),
+			new PhyscData("홍길", 152, 0.7),
+			new PhyscData("김홍길동", 172, 0.3),
+			new PhyscData("이길동", 182, 0.6),
+			new PhyscData("박길동", 167, 0.2),
+			new PhyscData("최길동", 169, 0.5)
 		};
 		showData(data);
-		sortData(data);
+		sortData(data);	
 		//Arrays.sort(null, null);//comparator가 필요하다 
 		showData(data);
 	}
 	static void showData(PhyscData[]arr) {
 		for(PhyscData a: arr)
-			System.out.println(a.name+"의 키는 "+a.height+"cm이며, 시력은 "+a.vision+"이다.");
+			System.out.println(a.toString());
 	}
 
 }
