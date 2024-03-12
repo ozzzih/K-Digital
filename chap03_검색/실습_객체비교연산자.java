@@ -8,14 +8,34 @@ class PhyscData3 {
 	String name;
 	int height;
 	double vision;
-
+	public PhyscData3(String string, int i, double d) {
+		this.name=string;
+		this.height=i;
+		this.vision=d;
+	}
+	@Override
+	public String toString() {
+		return name+"의 키는 "+height+"cm이며, 시력은 "+vision+"이다.";
+	}
 }
+
 class HeightOrderComparator2 implements Comparator<PhyscData3>{
-
+	@Override
+	public int compare(PhyscData3 o1, PhyscData3 o2) {
+		// TODO Auto-generated method stub
+		return (o1.height>o2.height)?1:
+			(o1.height<o2.height)?-1:0;
+	}	
 }
+
 public class 실습_객체비교연산자 {
 	static final Comparator<PhyscData3> HEIGHT_ORDER = new HeightOrderComparator2();
-
+	static void showData(String topic, PhyscData3[] arr) {
+		System.out.println(topic+" :: ");
+		for(PhyscData3 a:arr)
+			System.out.println(a.toString());
+	}
+	
 	public static void main(String[] args) {
 		PhyscData3[] data = {
 				new PhyscData3("홍길동", 162, 0.3),
@@ -28,12 +48,16 @@ public class 실습_객체비교연산자 {
 		};
 		showData("정렬전 객체 배열", data);
 		Arrays.sort(data, HEIGHT_ORDER);
+		System.out.println();
 		
 		showData("정렬후 객체 배열", data);
 		PhyscData3 key = new PhyscData3("길동", 167, 0.2);
+		System.out.println();
 		
 		int idx = Arrays.binarySearch(data, key, HEIGHT_ORDER);
-		System.out.println("\nArrays.binarySearch(): result = " + idx);
+		if(idx == -1)
+			System.out.println("그 값의 요소가 없습니다.");
+		else
+			System.out.println("\nArrays.binarySearch(): result = " + idx);
 	}
-
 }

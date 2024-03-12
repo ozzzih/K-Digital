@@ -1,5 +1,4 @@
 package chap03_검색;
-
 //3장 객체 배열 정렬 - binary search
 /*
 * Comparator를 사용하는 방법
@@ -21,18 +20,55 @@ class Fruit4 {
 	public String getName() {
 		return name;
 	}
+	public Fruit4(String name, int price, String expire) {
+		this.name=name;
+		this.price=price;
+		this.expire=expire;
+	}
+	@Override
+	public String toString() {
+		return name+"의 가격은 "+price+"원이며, 유통기간은 "+expire+"이다.";
+	}
 }
 //교재 123~129 페이지 참조하여 구현
 class FruitNameComparator2 implements Comparator<Fruit4>{
 	public int compare(Fruit4 f1, Fruit4 f2) {
-
-
+		return f1.name.compareTo(f2.name);
 	}
-public class 과제3_2_객체비교연산자 {
-
+}
+public class 과제3_2_객체배열이진탐색 {
+	static void showData(String topic, Fruit4[] arr) {
+		System.out.println();
+		System.out.println(topic+" :: ");
+		for(Fruit4 a:arr)
+			System.out.println(a.toString());
+	}
+	static void reverse(Fruit4[] a) {//교재 67페이지
+		System.out.println();
+		System.out.println("<<<<<데이터를 역순으로 정렬합니다.>>>>>");
+		for (int i=0; i<a.length/2; i++)
+			swap(a, i, a.length-i-1);
+	}
+	static int binarySearch(Fruit4[] item, Fruit4 key, Comparator<Fruit4> cc_name) {
+		int pl = 0;
+		int pr = item.length-1;
+		
+		do {
+			int pc = (pl+pr)/2;
+			if (item[pc]==key)
+				return pc;
+			else if(cc_name.compare(item[pc], key)<0)
+				pl = pc+1;
+			else
+				pr = pc-1;
+		}while(pl<=pr);
+		
+		return -1; //검색 실패
+	}
 	private static void sortData(Fruit4[] arr, Comparator<Fruit4> cc_price) {
-
+		
 	}
+	
 	static void swap(Fruit4[]arr, int ind1, int ind2) {
 		Fruit4 temp = arr[ind1]; arr[ind1] = arr[ind2]; arr[ind2] = temp;
 	}
@@ -107,21 +143,35 @@ public class 과제3_2_객체비교연산자 {
 		 * 교재 115 Arrays.binarySearch에 의한 검색
 		 */
 		int result3Index = Arrays.binarySearch(arr, newFruit4, cc_name);
-		System.out.println("\nArrays.binarySearch([수박,880,2023-5-18]) 조회결과::" + result3Index);
+		if(result3Index == -1)
+			System.out.println("\\nArrays.binarySearch([수박,880,2023-5-18]) 조회결과:: 그 값의 요소가 없습니다.");
+		else
+			System.out.println("\nArrays.binarySearch([수박,880,2023-5-18]) 조회결과::" + result3Index);
 		
 		result3Index = binarySearch(arr, newFruit4, cc_name);
-		System.out.println("\nbinarySearch([수박,880,2023-5-18]) 조회결과::" + result3Index);
+		if(result3Index == -1)
+			System.out.println("\\nbinarySearch([수박,880,2023-5-18]) 조회결과:: 그 값의 요소가 없습니다.");
+		else
+			System.out.println("\nbinarySearch([수박,880,2023-5-18]) 조회결과::" + result3Index);
 
 		sortData(arr, cc_price);
 		System.out.println("\ncomparator 정렬(가격)후 객체 배열: ");
 		showData("comparator를 사용한 정렬후:", arr);
 		
 		result3Index = Arrays.binarySearch(arr, newFruit4, cc_price);
-		System.out.println("\nArrays.binarySearch([수박,880,2023-5-18]) 조회결과::" + result3Index);
+		if(result3Index == -1)
+			System.out.println("\\nArrays.binarySearch([수박,880,2023-5-18]) 조회결과:: 그 값의 요소가 없습니다.");
+		else
+			System.out.println("\nArrays.binarySearch([수박,880,2023-5-18]) 조회결과::" + result3Index);
 		
 		result3Index = binarySearch(arr, newFruit4, cc_price);
-		System.out.println("\nbinarySearch() 조회결과::" + result3Index);
+		if(result3Index == -1)
+			System.out.println("\\nbinarySearch() 조회결과:: 그 값의 요소가 없습니다.");
+		else
+			System.out.println("\nbinarySearch() 조회결과::" + result3Index);
 
 	}
 
 }
+
+

@@ -11,6 +11,7 @@ public class 실습_스트림리스트 {
 	    	List<String> s_list = new ArrayList<>(Arrays.asList(arr));
 	    	s_list.remove(item);
 	    	return s_list.toArray(new String[0]);
+	    	
 
 	    }
 	    
@@ -43,6 +44,16 @@ public class 실습_스트림리스트 {
 		    String cities[] = new String[0];
 		    cities = list.toArray(cities);
 		    //for문으로 도시가 중복인 것을 체크=compareTo를 사용해서
+		    int count = cities.length;
+		    for(int i=0; i<count; i++) {
+		    	int j = i+1;
+		    	while(j<count) {
+		    		if() {
+		    			cities=removeElement1(cities, cities[j]);
+		    		}
+		    		j+=1;	
+		    	}
+		    }
 		    cities=Arrays.stream(cities).distinct().toArray(String[]::new);
 		    return cities;
 	    }
