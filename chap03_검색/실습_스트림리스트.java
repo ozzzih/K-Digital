@@ -11,15 +11,12 @@ public class 실습_스트림리스트 {
 	    	List<String> s_list = new ArrayList<>(Arrays.asList(arr));
 	    	s_list.remove(item);
 	    	return s_list.toArray(new String[0]);
-	    	
-
 	    }
 	    
 	    static void getList(List<String> list) {
 			list.add("서울");	list.add("북경");
 			list.add("상해");	list.add("서울");
 			list.add("도쿄");	list.add("뉴욕");
-
 
 			list.add("런던");	list.add("로마");
 			list.add("방콕");	list.add("북경");
@@ -48,13 +45,14 @@ public class 실습_스트림리스트 {
 		    for(int i=0; i<count; i++) {
 		    	int j = i+1;
 		    	while(j<count) {
-		    		if() {
+		    		if(cities[i].compareTo(cities[j])==0) {
 		    			cities=removeElement1(cities, cities[j]);
+		    			count-=1;	
 		    		}
-		    		j+=1;	
+		    		else j+=1;	
 		    	}
 		    }
-		    cities=Arrays.stream(cities).distinct().toArray(String[]::new);
+//		    cities=Arrays.stream(cities).distinct().toArray(String[]::new);
 		    return cities;
 	    }
 	    
