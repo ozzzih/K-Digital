@@ -30,6 +30,7 @@ public class 실습_스트림리스트 {
 	    		System.out.println(st);
 	    	}
 	    }
+	    
 	    static void sortList(List<String> list) {
 	    	//방법1:list.sort(null);
 	    	Collections.sort(list);
