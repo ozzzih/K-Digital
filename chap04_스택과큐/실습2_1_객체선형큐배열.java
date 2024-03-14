@@ -1,5 +1,6 @@
 package chap04_스택과큐;
 
+import java.util.ArrayList;
 //List를 사용한 선형 큐 구현  - 큐는 배열 사용한다 
 import java.util.Random;
 import java.util.Scanner;
@@ -49,11 +50,11 @@ class Point3 {
 
 //int형 고정 길이 큐
 class objectQueue2 {
-private Point3[] que;
+private Point3[] que; //que는 참조변수
 	private int capacity; // 큐의 크기
 	private int front; // 맨 처음 요소 커서
 	private int rear; // 맨 끝 요소 커서
-	private int num; // 현재 데이터 개수
+	static boolean isEmptyTag = true;
 
 //--- 실행시 예외: 큐가 비어있음 ---//
 	public class EmptyQueueException extends Exception {
@@ -73,14 +74,15 @@ private Point3[] que;
 
 
 //--- 생성자(constructor) ---//
-public objectQueue2(int maxlen) {
-	num=front=rear=0;
-	capacity=maxlen;
-	try {
-		que = new Point3[capacity];
-	}catch(OutOfMemoryError e) {
-		capacity=0;
-	}
+	public objectQueue2(int maxlen) {
+		front=rear=0;
+		capacity=maxlen;
+			
+		try {
+			que = new Point3[capacity];
+		}catch(OutOfMemoryError e) {
+			capacity=0;
+		}
 }
 
 //--- 큐에 데이터를 인큐 ---//
@@ -88,9 +90,11 @@ public objectQueue2(int maxlen) {
 		if(isFull())
 			throw new OverflowQueueException("enque: Queue is Full");
 		que[rear++]=x;
-		num++;
 		if(rear==capacity)
 			rear=0;
+		if(front==rear) {
+			isEmptyTag = false;
+		}
 		return 1;
 	}
 
@@ -99,9 +103,9 @@ public objectQueue2(int maxlen) {
 		if(isEmpty())
 			throw new EmptyQueueException("deque: Queue is Empty");
 		Point3 x = que[front++];
-		num--;
-		if(front == capacity)
-			front=0;
+
+		if(front == rear)
+			isEmptyTag=true;
 		return x;
 	}
 
@@ -116,12 +120,13 @@ public objectQueue2(int maxlen) {
 	public void clear() throws EmptyQueueException {
 		if (isEmpty()) // queue이 빔
 			throw new EmptyQueueException("clear: queue empty");
-		num = front=rear=0;
+		front=rear=0;
+		isEmptyTag=true;
 	}
 
 //--- 큐에서 x를 검색하여 인덱스(찾지 못하면 –1)를 반환 ---//
 	public int indexOf(Point3 x) {
-		for (int i = 0; i < num; i++) {
+		for (int i = 0; i < this.size(); i++) {
 			int idx = (i + front) % capacity;
 			if (que[idx].equals(x)) // 검색 성공
 				return idx;
@@ -136,25 +141,24 @@ public objectQueue2(int maxlen) {
 
 //--- 큐에 쌓여 있는 데이터 개수를 반환 ---//
 	public int size() {
-		return num;
+		return rear-front;
 	}
 
 //--- 큐가 비어있는가? ---//
 	public boolean isEmpty() {
-		return num <= 0;
+		return (front == rear);
 	}
-
 //--- 큐가 가득 찼는가? ---//
 	public boolean isFull() {
-		return num >= capacity;
+		return (rear >= capacity);
 	}
-
-//--- 큐 안의 모든 데이터를 프런트 → 리어 순으로 출력 ---//
-	public void dump() throws EmptyQueueException{
+	
+//--- 큐 안의 모든 데이터를 프런트 → 리어 순으로 출력 ---//	
+	public void dump() throws EmptyQueueException {
 		if(isEmpty())
 			throw new EmptyQueueException("dump: queue empty");
 		else {
-			for(int i=0; i<num; i++)
+			for(int i=0; i<this.size(); i++)
 				System.out.print(que[(i+front)%capacity]+" " );
 			System.out.println();
 		}

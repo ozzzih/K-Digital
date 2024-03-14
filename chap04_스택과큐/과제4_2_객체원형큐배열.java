@@ -1,12 +1,12 @@
 package chap04_스택과큐;
 
 /*
- * 원형 큐로서 큐에 Point 객체를 저장 - 교재 소스코드를 원형 큐가 되도록 수정하는 연습
+ * 원형 큐로서 큐에 Point 객체를 저장
+ * class CircularQueue의 필드는 QUEUE_SIZE, que,	front, rear, isEmptyTag 변수만 사용
  */
 
 import java.util.Random;
 import java.util.Scanner;
-
 
 class Point5 {
 	private int ix;
@@ -50,8 +50,7 @@ class CircularQueue {
 	static int QUEUE_SIZE = 0;
 	Point5[] que;//배열로 객체원형 큐 구현
 	int front, rear;
-	int num;
-	static boolean isEmptyTag;
+	static boolean isEmptyTag = true;
 	//--- 실행시 예외: 큐가 비어있음 ---//
 	public class EmptyQueueException extends Exception {
 		private static final long serialVersionUID = 1L;
@@ -66,25 +65,47 @@ class CircularQueue {
 			public OverflowQueueException(String message) {
 				super(message);
 			}
-		}
+	}
 
 	public CircularQueue(int count) {
-		
+		front = rear = 0;
+		que = new Point5[count];
+		isEmptyTag = true;
+		//다음 2개 field 가 필요한지 확인 필요 
+		QUEUE_SIZE = count;
 	}
 	void push(Point5 it) throws OverflowQueueException{
-	
-
+		if(isFull()) {
+			throw new OverflowQueueException("push: circular queue overflow"); 
+		}
+		que[rear++]=it;
+		if(rear==QUEUE_SIZE)
+			rear=0;
+		if(front==rear) {
+			isEmptyTag = false; //꽉차서 front==rear인 것이다. 다음에 push를 실행하면 바로 if(isFull)로넘어가서 예외처리	
+		}
+			
+		
 	}
 
-	Point5 pop() throws EmptyQueueException{
-
+	public Point5 pop() throws EmptyQueueException{
+		if(isEmpty()) {
+			throw new EmptyQueueException("pop: circular queue overflow"); 
+		}
+		Point5 x = que[front++];
+		if(front==rear)
+			isEmptyTag=true;
+		return x;
 
 	}
 
 	 void clear() throws EmptyQueueException{
-
+		if(isEmpty()) {
+			throw new EmptyQueueException("enque: circular queue overflow"); 
+		}
+		front=rear=0;
+		isEmptyTag=true;
 	}
-
 
 	//--- 큐의 크기를 반환 ---//
 		public int getCapacity() {
@@ -92,75 +113,124 @@ class CircularQueue {
 		}
 
 	//--- 큐에 쌓여 있는 데이터 개수를 반환 ---//
-		public int size() {
-			return num;
+		public int size() {//front, rear를 사용하여 갯수를 size로 계산
+			int queueSize = 0;
+			if(rear>front)
+				queueSize=rear-front;
+			else if(rear<front)
+				queueSize=QUEUE_SIZE-front+rear;
+			else if((rear==front)&&(isEmptyTag))
+				queueSize = 0;
+			else if((rear==front)&&(!isEmptyTag))
+				queueSize = QUEUE_SIZE;
+			return queueSize;
 		}
-		//--- 원형 큐가 비어있는가? --- 수정 필요//
+	//--- 원형 큐가 비어있는가? --- 수정 필요//
 		public boolean isEmpty() {
-			return num <= 0;
+			if(front == rear&&isEmptyTag)
+				return true;
+			else
+				return false;
 		}
 
 	//--- 원형 큐가 가득 찼는가? --- 수정 필요//
 		public boolean isFull() {
-			return num >= QUEUE_SIZE;
+			if(front == rear&&!isEmptyTag)
+				return true;
+			else
+				return false;
+	
 		}
 
 		public void dump() throws EmptyQueueException{
-
+			if (isEmpty())
+					throw new EmptyQueueException("dump: queue empty");
+			else {
+				for(int i=0; i<this.size(); i++)
+					System.out.print(que[(i+front)%QUEUE_SIZE]+" " );
+				System.out.println();
+			}
 		}
+		
 		public Point5 peek() throws EmptyQueueException {
-
+			if (isEmpty())
+				throw new EmptyQueueException("peek: queue empty"); // 큐가 비어있음
+			return que[front];
 		}
 }
 
 public class 과제4_2_객체원형큐배열 {
-public static void main(String[] args) {
-	Scanner stdIn = new Scanner(System.in);
-	CircularQueue oq = new CircularQueue(4); // 최대 64개를 인큐할 수 있는 큐
-	Random random = new Random();
-	int rndx = 0, rndy = 0;
-	Point5 p = null;
-	while (true) {
-		System.out.println(" "); // 메뉴 구분을 위한 빈 행 추가
-		System.out.printf("현재 데이터 개수: %d / %d\n", oq.size(), oq.getCapacity());
-		System.out.print("(1)인큐　(2)디큐　(3)피크　(4)덤프　(5)clear  (0)종료: ");
-		int menu = stdIn.nextInt();
-		switch (menu) {
-		case 1: // 인큐
-
-			rndx = random.nextInt(20);
-
-			rndy = random.nextInt(20);
-			System.out.print("입력데이터: (" + rndx + ", " + rndy + ")");
-			p = new Point5(rndx,rndy);
-			try {
-				oq.push(p);
-			} catch(objectQueue2.OverflowQueueException e) {
-				System.out.println("stack이 가득찼있습니다.");
-			}
-			break;
-
-		case 2: // 디큐
-			try {
-				p = oq.pop();
-				System.out.println("디큐한 데이터는 " + p + "입니다.");
-			} catch (objectQueue2.EmptyQueueException e) {
-				System.out.println("큐가 비어 있습니다.");
-			}
-			break;
-
-		case 3: // 피크
-
-			break;
-
-		case 4: // 덤프
-
-			break;
-		default:
-			break;
+	public static void main(String[] args) {
+		Scanner stdIn = new Scanner(System.in);
+		CircularQueue oq = new CircularQueue(4); // 최대 4개를 인큐할 수 있는 큐
+		Random random = new Random();
+		int rndx = 0, rndy = 0;
+		Point5 p = null;
+		while (true) {
+			System.out.println(" "); // 메뉴 구분을 위한 빈 행 추가
+			System.out.printf("현재 데이터 개수: %d / %d\n", oq.size(), oq.getCapacity());
+			System.out.print("(1)인큐　(2)디큐　(3)피크　(4)덤프　(5) clear  (0)종료: ");
+			int menu = stdIn.nextInt();
+			if (menu == 0)
+				break;
+			switch (menu) {
+			case 1: // 인큐
+	
+				rndx = random.nextInt(20);
+	
+				rndy = random.nextInt(20);
+				System.out.print("입력데이터: (" + rndx + ", " + rndy + ")");
+				p = new Point5(rndx,rndy);
+				try {
+					oq.push(p);
+					System.out.println("push: size() = "+ oq.size());
+				} catch(CircularQueue.OverflowQueueException e) {
+					System.out.println("queue이 full입니다." + e.getMessage());
+					e.printStackTrace();
+				}
+				break;
+	
+			case 2: // 디큐
+				try {
+					p = oq.pop();
+					System.out.println("pop: size() = "+ oq.size()+" "+p+"를 꺼냅니다.");
+				} catch (CircularQueue.EmptyQueueException e) {
+					System.out.println("queue이 비어있습니다." + e.getMessage());
+					e.printStackTrace();
+				}
+				break;
+	
+			case 3: // 피크
+				try {
+					p = oq.peek();
+					System.out.println("피크한 데이터는 " + p + "입니다.");
+				} catch (CircularQueue.EmptyQueueException e) {
+					System.out.println("queue가 비어있습니다." + e.getMessage());
+					e.printStackTrace();
+				}
+				break;
+			case 4: // 덤프
+				try {
+					oq.dump();
+				} catch (CircularQueue.EmptyQueueException e) {
+					System.out.println("queue가 비어있습니다." + e.getMessage());
+					e.printStackTrace();
+				}
+				break;
+			
+			case 5: //clear
+				try {
+					oq.clear();
+				} catch(CircularQueue.EmptyQueueException e) {
+					System.out.println("스택이 비어있습니다." + e.getMessage());
+					e.printStackTrace();
+				}
+				break;
+		}
 		}
 	}
-	}
-
-	
 }
+	
+
+
+

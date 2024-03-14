@@ -17,7 +17,8 @@ class Queue4 {
 	private int capacity; // 큐의 크기
 	private int front; // 맨 처음 요소 커서
 	private int rear; // 맨 끝 요소 커서
-	private int num; // 현재 데이터 개수
+	static boolean isEmptyTag=true;
+	//private int num; // 현재 데이터 개수
 
 //--- 실행시 예외: 큐가 비어있음 ---//
 	public class EmptyQueueException extends Exception {
@@ -37,6 +38,13 @@ class Queue4 {
 
 //--- 생성자(constructor) ---//
 public Queue4(int maxlen) {
+	front=rear=0;
+	capacity=maxlen;
+	try {
+		que = new ArrayList<Integer>();
+	} catch (OutOfMemoryError e) {
+		capacity=0;
+	}
 	
 }
 
@@ -44,7 +52,7 @@ public Queue4(int maxlen) {
 	public int enque(int x) throws OverflowQueueException {
 		if (isFull())
 			throw new OverflowQueueException("enque: queue overflow");
-		
+		que.add(x); rear++;
 		return x;
 	}
 
@@ -52,7 +60,8 @@ public Queue4(int maxlen) {
 	public int deque() throws EmptyQueueException {
 		if (isEmpty())
 			throw new EmptyQueueException("deque: queue empty");
-		
+		int x = que.get(front);
+		que.remove(front); rear--;
 		return x;
 	}
 
@@ -60,23 +69,20 @@ public Queue4(int maxlen) {
 	public int peek() throws EmptyQueueException {
 		if (isEmpty())
 			throw new EmptyQueueException("peek: queue empty");
-		
+		return que.get(front);
 	}
 
 //--- 큐를 비움 --- peek() 처럼 예외 발생 구현//
 	public void clear() throws EmptyQueueException {
-		/*
-		 * queue을 empty로 만들어야 한다.
-		 * queue이 empty일 때 clear()가 호출된 예외 발생해야 한다 
-		 */
 		if (isEmpty()) // queue이 빔
 			throw new EmptyQueueException("clear: queue empty");
-		
+		front=rear=0;
+		isEmptyTag=true;
 	}
 	
 //--- 큐에서 x를 검색하여 인덱스(찾지 못하면 –1)를 반환 ---//
 	public int indexOf(int x) {
-		for (int i = 0; i < num; i++) {
+		for (int i = 0; i < this.size(); i++) {
 			int idx = (i + front) % capacity;
 			if (que.get(idx) == x) // 검색 성공
 				return idx;
@@ -91,24 +97,32 @@ public Queue4(int maxlen) {
 
 //--- 큐에 쌓여 있는 데이터 개수를 반환 ---//
 	public int size() {
-		return num;
+		return rear-front;
 	}
 
 //--- 큐가 비어있는가? ---//
 	public boolean isEmpty() {
-		return num <= 0;
+		if(front == rear&&isEmptyTag)
+			return true;
+		else
+			return false;
 	}
 
 //--- 큐가 가득 찼는가? ---//
 	public boolean isFull() {
-		return num >= capacity;
+		if(front == rear&&!isEmptyTag)
+			return true;
+		else
+			return false;
 	}
 
 //--- 큐 안의 모든 데이터를 프런트 → 리어 순으로 출력 ---//
 	public void dump() throws EmptyQueueException{
 		if(isEmpty())
 			throw new EmptyQueueException("dump: queue empty");
-		
+		for(int i=0; i<this.size(); i++)
+			System.out.print(que.get((i+front)%capacity)+" " );
+		System.out.println();
 	}
 }
 

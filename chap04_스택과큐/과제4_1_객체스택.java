@@ -103,14 +103,17 @@ class objectStack{
 	public Point2 pop() throws EmptyGenericStackException  {
 		if (isEmpty()) // 스택이 빔
 			throw new EmptyGenericStackException("pop: stack empty");
-		return data.get(--top);
+		Point2 result = data.get(top-1);
+		data.remove(top-1); top--;
+		return result;
 	}
 
 //--- 스택에서 데이터를 피크(peek, 정상에 있는 데이터를 들여다봄) ---//
 	public Point2 peek() throws EmptyGenericStackException  {
 		if (isEmpty()) // 스택이 빔
 			throw new EmptyGenericStackException("peek: stack empty");
-		return data.get(top-1);
+		Point2 result = data.get(top-1);
+		return result;
 	}
 
 //--- 스택을 비움 ---//
@@ -191,6 +194,7 @@ public class 과제4_1_객체스택 {
 				p = new Point2(rndx,rndy);
 				try {
 					s.push(p);
+					System.out.println(p);
 				} catch(objectStack.OverflowGenericStackException e) {
 					System.out.println("stack이 가득찼있습니다.");
 				}
