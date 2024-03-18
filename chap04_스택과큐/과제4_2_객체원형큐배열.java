@@ -50,7 +50,7 @@ class CircularQueue {
 	static int QUEUE_SIZE = 0;
 	Point5[] que;//배열로 객체원형 큐 구현
 	int front, rear;
-	static boolean isEmptyTag = true;
+	static boolean isEmptyTag;
 	//--- 실행시 예외: 큐가 비어있음 ---//
 	public class EmptyQueueException extends Exception {
 		private static final long serialVersionUID = 1L;
