@@ -4,7 +4,6 @@ package chap05_재귀알고리즘;
 import java.util.ArrayList;
 import java.util.List;
 
-import chap05_재귀알고리즘.Stack4.EmptyGenericStackException;
 
 //https://www.geeksforgeeks.org/n-queen-problem-backtracking-3/?ref=lbp
 //N Queen problem / backtracking
@@ -16,11 +15,11 @@ import chap05_재귀알고리즘.Stack4.EmptyGenericStackException;
  * Queen/8, rook/8, bishop/?, knight/? rook 2개/a, h, knight 2개/b, g, bishop
  * 2개/c, f, queen 1개/black queen은 black 칸에, 폰 8개
  */
-class Point {
+class Point1 {
 	private int ix;
 	private int iy;
 
-	public Point(int x, int y) {
+	public Point1(int x, int y) {
 		ix = x;
 		iy = y;
 	}
@@ -55,7 +54,7 @@ class Point {
 	}
 }
 
-class Stack4 {
+class Stack1 {
 	// --- 실행시 예외: 스택이 비어있음 ---//
 	// generic class는 Throwable을 상속받을 수 없다 - 지원하지 않는다
 	public class EmptyGenericStackException extends Exception {
@@ -73,24 +72,24 @@ class Stack4 {
 		}
 	}
 
-	private List<Point> data; // 스택용 배열
+	private List<Point1> data; // 스택용 배열
 	// private List<T> data;
 	private int capacity; // 스택의 크기
 	private int top; // 스택 포인터
 
 	// --- 생성자(constructor) ---//
-	public Stack4(int capacity) {
+	public Stack1(int capacity) {
 		top = 0;
 		this.capacity = capacity;
 		try {
-			data = new ArrayList<Point>() ; // 스택 본체용 배열을 생성
+			data = new ArrayList<Point1>() ; // 스택 본체용 배열을 생성
 		} catch (OutOfMemoryError e) { // 생성할 수 없음
 			capacity = 0;
 		}
 	}
 
 	// --- 스택에 x를 푸시 ---//
-	public boolean push(Point x) throws OverflowGenericStackException {
+	public boolean push(Point1 x) throws OverflowGenericStackException {
 		if (isFull()) // 스택이 가득 참
 			throw new OverflowGenericStackException("push: stack overflow");
 		data.add(x); top++;
@@ -98,16 +97,16 @@ class Stack4 {
 	}
 
 	// --- 스택에서 데이터를 팝(정상에 있는 데이터를 꺼냄) ---//
-	public Point pop() throws EmptyGenericStackException {
+	public Point1 pop() throws EmptyGenericStackException {
 		if (isEmpty()) // 스택이 빔
 			throw new EmptyGenericStackException("pop: stack empty");
-		Point result = data.get(top-1); 
+		Point1 result = data.get(top-1); 
 		data.remove(top-1); top--;
 		return result;
 	}
 
 	// --- 스택에서 데이터를 피크(peek, 정상에 있는 데이터를 들여다봄) ---//
-	public Point peek() throws EmptyGenericStackException {
+	public Point1 peek() throws EmptyGenericStackException {
 		if (isEmpty()) // 스택이 빔
 			throw new EmptyGenericStackException("peek: stack empty");
 		return data.get(top-1);
@@ -121,7 +120,7 @@ class Stack4 {
 	}
 
 	// --- 스택에서 x를 찾아 인덱스(없으면 –1)를 반환 ---//
-	public int indexOf(Point x) {
+	public int indexOf(Point1 x) {
 		for (int i = top - 1; i >= 0; i--) // 꼭대기 쪽부터 선형 검색
 			if (data.get(i).equals(x))
 				return i; // 검색 성공
@@ -160,13 +159,13 @@ class Stack4 {
 	}
 }
 
-public class 과제5_1_8Queen {
+public class 과제5_1_8Queen_비숍 {
 	public static void EightQueen(int[][] d) {
 		int ix = 0; int iy = 0;
 		int count = 0;
-		Point p = new Point(ix, iy);
+		Point1 p = new Point1(ix, iy);
 		d[ix][iy] = 1;
-		Stack4 st = new Stack4(100);
+		Stack1 st = new Stack1(100);
 		st.push(p);
 		count++;
 		ix++;
@@ -175,19 +174,17 @@ public class 과제5_1_8Queen {
 
 		while (!(iy == d[0].length && ix == 0)) {
 			int nm = nextMove(d, ix, iy);
-			 
 			if (nm != -1) {
 				iy = nm;
 				d[ix][iy] = 1;
-				Point p1 = new Point(ix, iy);
+				Point1 p1 = new Point1(ix, iy);
 				//System.out.println("st에 push"+p1);				
 				st.push(p1);
 				count++;
 				ix++; iy = 0;
 			}
 			else {
-				Point pp=null;
-				
+				Point1 pp=null;
 				try {
 					pp = st.pop();		
 					//System.out.println("st에서 pop" + pp);
@@ -248,7 +245,7 @@ public class 과제5_1_8Queen {
 
 			int cyp = cy;
 			int cym = cy;
-			
+
 			while ((cxp >= 0 && cxp < d.length) && (cyp >= 0 && cyp < d[0].length)) {
 				if (d[cxp][cyp] == 1) {
 					return false;
