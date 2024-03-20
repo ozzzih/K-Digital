@@ -171,7 +171,7 @@ public class 과제5_1_8Queen {
 		count++;
 		ix++;
 
-		int rescount = 0;
+		int numSolution = 0;
 
 		while (!(iy == d[0].length && ix == 0)) {
 			int nm = nextMove(d, ix, iy);
@@ -201,7 +201,7 @@ public class 과제5_1_8Queen {
 			}
 			if (count == d[0].length) {
 				try {
-					System.out.println("<<<"+(rescount+1)+"번째 해답"+">>>");
+					System.out.println("<<<"+(numSolution+1)+"번째 해답"+">>>");
 					st.dump();
 					showQueens(d);
 				} catch (EmptyGenericStackException e) {
@@ -220,7 +220,7 @@ public class 과제5_1_8Queen {
 				d[ix][iy] = 0;
 				count--;
 				iy++;
-				rescount++;
+				numSolution++;
 			}		
 		}
 	}
