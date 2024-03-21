@@ -46,6 +46,7 @@ public class 실습_객체비교연산자 {
 				new PhyscData3("길동", 167, 0.2),
 				new PhyscData3("길동", 167, 0.5),
 		};
+		System.out.println(data[3].height);
 		showData("정렬전 객체 배열", data);
 		Arrays.sort(data, HEIGHT_ORDER);
 		System.out.println();

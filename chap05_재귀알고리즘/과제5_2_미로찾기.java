@@ -146,25 +146,25 @@ class StackList {
 					int g = i + moves[d].a;
 					int h = j + moves[d].b;
 					//st.dump();
-					if ((maze[g][h] == 0) && (mark[g][h] == 0)) { // new position: 아직 아무도 도달하지 않은 곳
+					if ((maze[g][h] == 0) && (mark[g][h] == 0)) { // new position: 아직 아무도 도달하지 않은 곳=>갈수있는곳
 						maze[i][j] = 1;
 						Items tmp1 = new Items(0, 0, 0);//N :: 0
 						tmp1.x=i; tmp1.y=j; tmp1.dir=d+1;
-						
 						st.push(tmp1);
-						//System.out.println("push:"+tmp1);
 						i=g; j=h; d=0;
 						
 					} else {
 						d++;
 					}	
 					if ((g == ix) && (h == iy)) { // reached exit
+						Items tmp2 = new Items(0, 0, 0);//N :: 0
+						tmp2.x=g; tmp2.y=h; tmp2.dir=d;
+						
+						st.push(tmp2);
 						st.dump();						// output path
 						while(!st.isEmpty()) {
 							temp=st.pop();
-							//System.out.println("pop:"+temp);
-							mark[temp.x][temp.y]=2;
-							
+							mark[temp.x][temp.y]=2;							
 						}
 					} 
 				}			
@@ -172,12 +172,8 @@ class StackList {
 		}
 		static void showMatrix(int[][]d, int row, int col) {
 			for (int i = 0; i <= row; i++) {
-				for (int j = 0; j <= col; j++) {
-					if(d[i][j]==0)
-						System.out.print(1 + " ");
-					else
-						System.out.print(d[i][j] + " ");
-
+				for (int j = 0; j <= col; j++) {	
+					System.out.print(d[i][j] + " ");
 				}
 				System.out.println();
 			}
@@ -229,12 +225,14 @@ class StackList {
 			}
 			System.out.println("maze[12,15]::문제");
 			showMatrix(maze, 13, 16);
-		
-			System.out.println("mark::실행전");
-			showMatrix(mark, 13, 16);//빈정답지
+			
+			System.out.println("mark::");
+			showMatrix(mark, 13, 16);
 
 			path(maze, mark, 12, 15);
-			System.out.println("mark::실행후");
+			System.out.println("mark::");
 			showMatrix(mark, 13, 16);
+		
+			
 		}
 	}
