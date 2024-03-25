@@ -4,12 +4,13 @@ class Polynomial implements Comparable<Polynomial>{
     double coef;           // 계수
     int    exp;            // 지수
 	public Polynomial(double d, int i) {
-		// TODO Auto-generated constructor stub
+		coef=d;
+		exp=i;
 	}
 	@Override
 	public int compareTo(Polynomial o) {
-		// TODO Auto-generated method stub
-		return 0;
+		return (this.exp<o.exp)?1:
+			(this.exp>o.exp)?-1:0;
 	}
 
 
@@ -17,7 +18,21 @@ class Polynomial implements Comparable<Polynomial>{
 public class 과제6_2_다항식merge연산 {
 
 	static void merge(Polynomial[] a, int lefta, int righta, int leftb, int rightb ) {
-
+		Polynomial temp[] = new Polynomial[30];
+		int ix = 0;
+		int p = lefta, q = leftb;
+		while (p <= righta && q <= rightb) {
+			if (a[p].compareTo(a[q])<0) temp[ix++] = a[p++];
+			else if (a[p].compareTo(a[q])>0) temp[ix++] = a[q++];
+			else {
+				temp[ix++] = new Polynomial(a[p++].coef+a[q++].coef, a[p++].exp);
+			}
+		}
+		while (p > righta && q <= rightb) temp[ix++] = a[q++];
+		while (q > rightb && p <= righta) temp[ix++] = a[p++];
+		for (int j = 0; j < ix; j++) {
+			a[lefta+ j] = temp[j];
+		}
 	}
 
 	// --- 퀵 정렬(비재귀 버전)---//
@@ -28,6 +43,24 @@ public class 과제6_2_다항식merge연산 {
 		MergeSort(a, mid+1, right);
 		merge(a, left, mid, mid+1, right);
 		return;
+	}
+	
+	static void AddPolynomial(Polynomial[] a, Polynomial[] b, Polynomial[] c) {
+		int n=0;
+		for(int i=0; i<a.length; i++) {
+			c[n++]=a[i];
+		}
+		for(int j=0; j<b.length; j++) {
+			c[n++]=b[j];
+		}
+		MergeSort(c, 0, c.length - 1);
+	}
+	
+	static void ShowPolynomial(Polynomial[] x) {
+		for(int i=0; i<x.length-1; i++) {
+			System.out.print(x[i].coef+"^"+x[i].exp+"+");
+		}
+		System.out.println(x[x.length-1].coef+"^"+x[x.length-1].exp);
 	}
 
 	public static void main(String[] args) {
@@ -51,20 +84,17 @@ public class 과제6_2_다항식merge연산 {
 		     };
 		int nx = x.length;
 
-
+		System.out.println("----정렬전----");
 		ShowPolynomial(x);
 		ShowPolynomial(y);
 		MergeSort(x, 0, x.length - 1); // 배열 x를 퀵정렬
 		MergeSort(y, 0, y.length - 1); // 배열 x를 퀵정렬
+		System.out.println("----정렬후----");
 		ShowPolynomial(x);
 		ShowPolynomial(y);
 		Polynomial[] z = new Polynomial[20];
 		AddPolynomial(x,y,z);//다항식 덧셈 z = x + y
 		ShowPolynomial(z);
-		ShowPolynomial(y);
-		MultiplyPolynomial(x,y,z);//다항식 곱셈 z = x * y
-		ShowPolynomial(y);
-		int result = EvaluatePolynomial(z, 10);//다항식 값 계산 함수 z(10) 값 계산한다 
-		System.out.println(" result = " + result );
+		
 	}
 }

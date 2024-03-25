@@ -15,7 +15,7 @@ class PhyscData implements Comparable<PhyscData>{
 	@Override
 	public int compareTo(PhyscData o) {
 		return (this.height>o.height)?1:
-				(this.height<o.height)?-1:0;
+				(this.height<o.height)?-1:(this.vision>o.vision)?1:(this.vision<o.vision)?-1:0;
 	}
 }
 public class 과제6_1_정렬 {
@@ -33,13 +33,9 @@ public class 과제6_1_정렬 {
 		}
 		while (p > righta && q <= rightb) temp[ix++] = a[q++];
 		while (q > rightb && p <= righta) temp[ix++] = a[p++];
-		System.out.println();
 		for (int j = 0; j < ix; j++) {
 			a[lefta+ j] = temp[j];
-			System.out.print(" "+ a[lefta+j]);
 		}
-			System.out.println();
-
 	}
 
 	// --- 퀵 정렬(비재귀 버전)---//
