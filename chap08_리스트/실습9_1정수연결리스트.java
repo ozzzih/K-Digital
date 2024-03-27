@@ -1,4 +1,4 @@
-package Chap8_List;
+package chap08_리스트;
 //단순한 linked list에서 insert, delete하는 알고리즘을 코딩: 1단계
 
 import java.util.Random;
@@ -23,7 +23,8 @@ class LinkedList1 {
 
 	public int Delete(int element) // delete the element
 	{
-		Node1 q, current = first;
+		Node1 p=first, q=null;
+	
 		q = current;
 
 		return -1;// 삭제할 대상이 없다.

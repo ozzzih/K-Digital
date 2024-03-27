@@ -20,9 +20,8 @@ class Heap implements MaxHeap {
 	}
 
 	public void display() {
-		for(int i: heap) {
-//			if(i==0) break;
-			System.out.println(i+"\t");
+		for(int i=0; i<=n; i++) {
+			System.out.println(heap[i]+"\t");
 		}
 	}
 	@Override
@@ -31,13 +30,18 @@ class Heap implements MaxHeap {
 		if (n == MaxSize) { HeapFull(); return; }
 		n++; 
 		for (i = n; i>=1; i/=2) {
-			System.out.println(i);
-			if (i == 1) break; // at root
-			if (x <= heap[i / 2]) break;
+			if (i == 1) {
+				heap[i]=x;
+				break;} // at root
+			if (x <= heap[i / 2]) {
+				heap[i]=x;
+				break;
+			}
 			// move from parent to i
 			heap[i] = heap[i / 2];
+			heap[i/2]=x;
 		}
-		heap[i] = x;
+
 	}
 	@Override
 	public int DeleteMax() {
@@ -46,8 +50,9 @@ class Heap implements MaxHeap {
 		int x = heap[1]; int k = heap[n--];
 		for(int j=2; j<=n; j++) {
 			if(j<n) {
-				if(heap[j]<heap[j+1])
+				if(heap[j]<heap[j+1]) {
 					j++;
+				}		
 			}
 			if(k>heap[j]) break;
 			heap[i]=heap[j];
@@ -56,24 +61,6 @@ class Heap implements MaxHeap {
 		heap[i]=k;
 		return x;
 	}
-//	Element<Type>* MaxHeap<Type>::DeleteMax(Element<Type>& x)
-//	{
-//		int i, j;
-//		if (!n) { HeapEmpty(); return 0; }
-//		x = heap[1]; Element<Type> k = heap[n]; n--;
-//
-//		for (i = 1, j = 2; j <= n; )
-//		{
-//			if (j < n) if (heap[j].key < heap[j + 1].key) j++;
-//			// j points to the larger child
-//			if (k.key >= heap[j].key) break;
-//			heap[i] = heap[j];
-//			i = j; j *= 2;
-//		}
-//		heap[i] = k;
-//		return &x;
-//	}
-
 
 	private void HeapEmpty() {
 		System.out.println("Heap Empty");
@@ -115,6 +102,7 @@ public class 과제6_3_HeapSort {
 				}
 			
 				for(int j=0; j<count; j++) {
+					System.out.println(x[j]);
 					heap.Insert(x[j]);
 				}
 				break;
@@ -124,8 +112,8 @@ public class 과제6_3_HeapSort {
 				break;
 				
 			case 3:
-				
-
+				System.out.println("최고값 "+heap.DeleteMax()+"이 삭제되고 새롭게 퀵 정렬합니다.");
+				heap.display();
 				break;
 
 			case 4:
