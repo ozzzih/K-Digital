@@ -5,7 +5,7 @@ package chap08_리스트;
 import java.util.Comparator;
 import java.util.Scanner;
 
-import com.ruby.java.test.Node3;
+
 
 
 class SimpleObject5 {
@@ -43,7 +43,7 @@ class SimpleObject5 {
 
 	private static class NoOrderComparator implements Comparator<SimpleObject5> {
 		public int compare(SimpleObject5 d1, SimpleObject5 d2) {
-			return (d1.no.compareTo(d2.no) > 0) ? 1 : (d1.no.compareTo(d2.no)<0) ? -1 : 0;
+			return (Integer.parseInt(d1.no)>Integer.parseInt(d2.no)) ? 1 : (Integer.parseInt(d1.no)<Integer.parseInt(d2.no)) ? -1 : 0;
 		}
 	}
 
@@ -77,17 +77,23 @@ class LinkedList2 {
 		Node2 q, current = first;
 		q = current;
 		Node2 x=new Node2(element);
-		while(q.link!=null) {
-			if(cc.compare(q.data, x.data)==0) {
-				q=q.link;
-				current.link=q;
-				return 1;
-			} else {
-				current=q;
-				q=q.link;
+		if (first==null) return -1;
+		else if(cc.compare(first.data, x.data)==0) {
+			first=first.link;
+			return 1;
+		}else {
+			while(q!=null) {
+				if(cc.compare(q.data, x.data)==0) {
+					q=q.link;
+					current.link=q;
+					return 1;
+				} else {
+					current=q;
+					q=q.link;
+				}
 			}
 		}
-
+		
 		return -1;// 삭제할 대상이 없다.
 	}
 	public void Show() { // 전체 리스트를 순서대로 출력한다.
@@ -114,12 +120,12 @@ class LinkedList2 {
 			return;
 		}
 
-		else if(cc.compare(first.data, newNode.data)<0) {
+		else if(cc.compare(newNode.data,first.data )<0) {//원래 있던 첫번째 애보다 작을 때
 			newNode.link = first;
 			first = newNode;
-		} else {
+		} else { //원래 있던 첫번째 애보다 클 때
 			q=first;
-			while(q.link!=null && cc.compare(q.link.data, newNode.data)<0){
+			while(q.link!=null && cc.compare(q.link.data,newNode.data )<0){
 				q=q.link;
 			}
 			newNode.link=q.link;
@@ -127,27 +133,48 @@ class LinkedList2 {
 		}
 	}
 
-	public boolean Search(SimpleObject5 element, Comparator<SimpleObject5> cc) { 
+	public SimpleObject5 Search(SimpleObject5 element, Comparator<SimpleObject5> cc) { 
 		// 전체 리스트를 올림차순 순서대로 출력한다.
 		Node2 q, current = first;
 		q = current;
 		Node2 x = new Node2(element);
-		while(q.link!=null) {
+		while(q!=null) {
 			if(cc.compare(q.data, x.data)==0) {
-				return true;
+				return q.data;
 			}else {
 				q=q.link;
 			}
 		}
-		return false;
+		return null;
 	}
-	void Merge(LinkedList1 b) {
+	void Merge(LinkedList2 b) {
 		/*
 		 * 연결리스트 a,b에 대하여 a = a + b
 		 * merge하는 알고리즘 구현으로 in-place 방식으로 합병/이것은 새로운 노드를 만들지 않고 합병하는 알고리즘 구현
 		 * 난이도 등급: 최상급
 		 * 회원번호에 대하여 a = (3, 5, 7), b = (2,4,8,9)이면 a = (2,3,4,5,8,9)가 되도록 구현하는 코드
 		 */
+		Node2 p = this.first;
+		Node2 q= b.first;
+		Node2 tempp , tempq = null; 
+		
+		Comparator<SimpleObject5> cc= SimpleObject5.NO_ORDER;
+		while(p!=null&&q!=null) {
+			if(cc.compare(p.data, q.data)<0) {
+				while(p.link!=null&&cc.compare(p.link.data, q.data)<0) 
+					p=p.link;
+				tempp=p.link;
+				p.link=q;
+				p=tempp; 
+			}else {
+				while(q.link!=null&&cc.compare(q.link.data, p.data)<0) 
+					q=q.link;
+				tempq=q.link;
+				q.link=p;
+				q=tempq; 
+			}
+		}
+		this.Show();
 	}
 }
 public class 과제9_1객체연결리스트_test {
@@ -216,11 +243,11 @@ public class 과제9_1객체연결리스트_test {
 			case Search : // 회원 번호 검색
 				data = new SimpleObject5();
 				data.scanData("탐색", SimpleObject5.NO);
-				boolean result = l.Search(data, SimpleObject5.NO_ORDER);//회원번호로 검색
-				if (result)
-					System.out.println("검색 성공 = " + result );
+				SimpleObject5 result = l.Search(data, SimpleObject5.NO_ORDER);//회원번호로 검색
+				if (result!=null)
+					System.out.println("<<검색 성공>>" + result.toString() );
 				else
-					System.out.println("검색 실패 = " + result);
+					System.out.println("<<검색 실패: 검색 결과가 없습니다.>> ");
 				break;
 			case Merge://난이도 상: 노드를 새로 만들지 않고 가리키는 것만 바꿔서 
 				for (int i = 0; i < count; i++) {//3개의 객체를 연속으로 입력받아 l2 객체를 만든다 
@@ -228,7 +255,7 @@ public class 과제9_1객체연결리스트_test {
 					data.scanData("병합", 3);
 					l2.Add(data, SimpleObject5.NO_ORDER );				
 				}
-//				l.Merge(l2);
+				l.Merge(l2);
 				break;
 			case Exit :                           // 꼬리 노드 삭제
 				break;

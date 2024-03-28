@@ -1,4 +1,4 @@
-package Chap8_List;
+package chap08_리스트;
 
 /*
  * 정수 리스트 > 객체 리스트> 객체 원형 리스트 
@@ -122,7 +122,7 @@ class CircularList {
 	}
 }
 
-public class 실습9_4객체원형리스트 {
+public class 과제9_2객체원형리스트 {
 	enum Menu {
 		Add("삽입"), Delete("삭제"), Show("인쇄"), Search("검색"), Merge("합병"), Exit("종료");
 
