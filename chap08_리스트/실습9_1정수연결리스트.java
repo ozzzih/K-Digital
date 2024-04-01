@@ -18,7 +18,7 @@ class LinkedList1 {
 	Node1 first;
 
 	public LinkedList1() {
-		first = null;
+		first = null; 
 	}
 
 	public int Delete(int element) // delete the element
