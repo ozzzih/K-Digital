@@ -201,7 +201,7 @@ public class 과제9_1객체연결리스트_test {
 	}
 
 	//--- 메뉴 선택 ---//
-	static Menu SelectMenu() 
+	static Menu SelectMenu() {
 		Scanner sc = new Scanner(System.in);
 		int key;
 		do {

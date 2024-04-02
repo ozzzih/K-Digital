@@ -34,10 +34,10 @@ class SimpleChainHash {
 		 Node p =table[hash];
 		 while(p!=null) {
 			 if(p.getKey()==key)
-				 return p.getKey();
+				 return 1;
 			 p=p.next;
 		 }
-		 return -1;
+		 return 0;
 	 }
 	
 	 //--- 키값이 key인 데이터를 data의 요소로 추가 ---//
@@ -67,12 +67,12 @@ class SimpleChainHash {
 					 table[hash] = p.next;
 				 else
 					 pp.next=p.next;
-				 return 0;
+				 return 1;
 			 }
 			 pp = p;
 			 p=p.next;
 		 }
-		 return 1;
+		 return 0;
 	 }
 	
 	 //--- 해시 테이블을 덤프(dump) ---//
