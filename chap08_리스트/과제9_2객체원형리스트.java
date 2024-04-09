@@ -104,6 +104,24 @@ class CircularList {
 	public void Add(SimpleObject3 element, Comparator<SimpleObject3> cc) // 임의 값을 삽입할 때 리스트가 오름차순으로 정렬이 되도록 한다
 	{
 		Node3 newNode = new Node3(element);
+		Node3 p,q;
+		if(first==null) {
+			first=newNode;
+		}else if(cc.compare(element, first.data)<0) {
+			newNode.link=first;
+			first=newNode;
+		}else {
+			p=first;
+			while(p.link!=null||cc.compare(element, p.data)<0) {
+				q=p;
+				p=p.link;
+			}
+			q.link=newNode;
+			
+			
+		}
+		
+		
 	
 	}
 
@@ -112,7 +130,7 @@ class CircularList {
 
 		return false;
 	}
-	void Merge(LinkedList1 b) {
+	void Merge(CircularList b) {
 		/*
 		 * 연결리스트 a,b에 대하여 a = a + b
 		 * merge하는 알고리즘 구현으로 in-place 방식으로 합병/이것은 새로운 노드를 만들지 않고 합병하는 알고리즘 구현
@@ -197,7 +215,7 @@ public class 과제9_2객체원형리스트 {
 				for (int i = 0; i < count; i++) {//3개의 객체를 연속으로 입력받아 l2 객체를 만든다 
 					data = new SimpleObject3();
 					data.scanData("병합", 3);
-					l2.Add(data, SimpleObject5.NO_ORDER );				
+					l2.Add(data, SimpleObject3.NO_ORDER );				
 				}
 				l.Merge(l2);
 			case Exit: // 꼬리 노드 삭제

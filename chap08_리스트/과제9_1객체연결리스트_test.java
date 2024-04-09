@@ -127,7 +127,7 @@ class LinkedList2 {
 			q=first;
 			while(q.link!=null && cc.compare(q.link.data,newNode.data )<0){
 				q=q.link;
-			}
+			} 
 			newNode.link=q.link;
 			q.link = newNode;
 		}
