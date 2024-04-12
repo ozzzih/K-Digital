@@ -1,2 +1,10 @@
 HTML/** linguist-documentation=false
 HTML/** linguist-vendored=false
+JAVA/** linguist-documentation=false
+JAVA/** linguist-vendored=false
+Python/** linguist-documentation=false
+Python/** linguist-vendored=false
+datastructure/** linguist-documentation=false
+datastructure/** linguist-vendored=false
+jdbc/edu/pnu/** linguist-documentation=false
+jdbc/edu/pnu/** linguist-vendored=false
