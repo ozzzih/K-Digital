@@ -1,0 +1,27 @@
+*{
+    width: 500px;
+    padding: 20px;
+    border: 1px solid rgb(#B9A44C);
+    text-align: right;
+    color: rgb(#fa7921);
+    font-size: 24px;
+}
+
+p{
+    font-size: 2rem;
+}
+h1{
+    font-size: 64px;
+    color: palegoldenrod;
+}
+.my_p{
+    font-size: 16px;
+    color: red;
+}
+#my_id{
+    font-size: 20px;
+    color: #fa7921;
+}
+.highlight{
+    background-color: yellow;
+}

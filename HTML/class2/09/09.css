@@ -1,0 +1,44 @@
+
+.row{
+    background-color: #eae0d5;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.head{
+    background-color: #5e503f;
+    color: white;
+    
+}
+
+#msg{
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+
+
+
+
+.inrow{
+    margin-top: 10px;
+    
+    
+}
+
+select{
+    display: inline-flex;
+    width: 90%;
+    height: 30px;
+    margin-left: 0px;
+}
+
+input[type='number']{
+    height: 40px;
+    margin-left: 1px;
+}
+button{
+    height: 45px;
+    width: 50px;
+}

@@ -1,0 +1,148 @@
+*{
+    /*border:1px solid black;*/
+    
+    
+    font-family: "Fredoka", sans-serif;
+    font-optical-sizing: auto;
+    font-weight:500;
+    font-style: normal;
+    font-variation-settings:
+        "wdth" 100;
+    
+    padding: 0;
+    
+    
+}
+a, a:link, a:visited{
+    color: inherit;
+    text-decoration: none;
+}
+
+.menu{
+    display: flex;
+    font-size: 1.2rem;
+    
+    
+}
+
+.about{
+    
+    font-size: 2rem;
+    margin: 0;
+    justify-content: space-between;
+    align-items: center;
+}
+.about h4{
+    font-size: 2rem;
+    color: rgb(245, 65, 95);
+}
+.about h1{
+    font-size: 3rem;
+    font-family: "Protest Strike", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+.about h3{
+    font-size: 2rem;
+    font-family: "Protest Strike", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: rgb(124, 60, 71);
+
+}
+.introduce{
+    display: flex;
+    margin: 0px;
+    padding: 0px;
+    margin: 0rem auto;
+    
+    
+
+    align-items: center;
+}
+@media screen and (max-width:1140px) {
+    .section .introduce{
+        width: 992px;
+    }
+}
+.about{
+    width: 50%;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    margin: 0rem auto;
+    /*margin: 0rem auto;
+    a
+    
+    width: 50%;
+    height: 100vh;
+    align-items: center;*/
+    
+}
+
+.text{
+    max-width: 500px;
+}
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 2rem;
+    color: palevioletred;
+    position: fixed;
+    width: 100%;
+    background-color: white;
+
+}
+.main{
+    color: white;
+    align-content: center;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+    height: 100vh;
+    align-items: center;
+    /* background-image: url("/image/winter.jpg"); */
+    background: linear-gradient(rgb(214, 199, 199), rgb(226, 122, 122)), url('/image/winter.jpg') ;
+    background-size: cover;
+    /* 그림이 바둑판처럼 안나오도록 */
+    background-position: center;
+    display: flex;
+    
+
+}
+
+.main h3{
+    font-size:2rem;
+}
+
+.main h2{
+    font-size: 3.5rem;
+    margin: 2rem 0;
+    letter-spacing: 3px;
+
+}
+
+.main p { 
+    max-width: 500px;
+    margin: 0 auto;
+    font-size: 1.25rem;
+}
+
+
+div{
+    padding: 20px;
+    
+}
+.main button.download{
+    background-color: transparent; 
+    /* 투명하게 */ 
+    border: 3px solid white;
+    border-radius: 20px;
+    padding: 1rem 2rem;
+    margin-top: 3rem;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 2rem;
+}

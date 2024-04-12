@@ -1,0 +1,49 @@
+html, body, h1, h2, h3, p{
+    font-size: 16px;
+}
+table, td, tr, th{
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+h1{
+    font-size: 24px;
+    color: red;
+}
+.first{
+    background-color: wheat;
+}
+.second{
+    background-color: aquamarine;
+}
+.p_first{
+    font-size: 12px;
+    color: blue;
+}
+
+#my_id{
+    font-size: 32px;
+    color: yellow;
+}
+input[type="text"]{
+    border: 2px dashed blue;
+    font-size: 24px;
+}
+
+input[type="email"]{
+    color: red;
+    font-size: 24px;
+}
+button{
+    font-size: 24px;
+    height: 40px;
+    width: 120px;
+    background-color: rgb(110, 173, 16);
+    border: none;
+    color: white;
+    border-radius: 5px;
+    
+}
+button:hover{
+    opacity: 0.5;
+    cursor: pointer;
+}

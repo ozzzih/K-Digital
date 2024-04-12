@@ -1,0 +1,71 @@
+*{
+    
+    box-sizing:border-box;
+    
+    
+    
+}
+#postit {
+    width:350px;
+    height:350px;
+    padding:30px;
+    
+    transform:rotate(10deg);
+    text-align:center;
+    background-image: url("/image/postit.jpg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    font-family: 'NanumGaRamYeonGgoc', sans-serif;
+  }
+#login{
+    width:304px;
+    text-align: center;
+    height: 390px;
+    
+    font-family: "Roboto", sans-serif;
+    
+    
+}
+#googlebutton{
+    width:228px;
+    height: 44px;
+    text-align: center;
+    margin-top: 28px;
+    background-color: white;
+    font-weight: bold;
+    font-size: 14px;
+    
+}
+#googlebutton:hover{
+    opacity: 0.5;
+    cursor: pointer;
+}
+
+#information{
+    width:228px;
+    height: 44px;
+    text-align: left;
+    background-color: #eaeaea;
+    border-width: 0;
+    text-indent: 10px;
+    margin-top: 3px;
+}
+
+#login_button{
+    width: 228px;
+    height: 44px;
+    background-color: #373F3C;
+    color: #ffffff;
+    margin-top: 3px;
+    
+
+}
+#login_button:hover{
+    opacity: 0.8;
+    cursor: pointer;
+}
+p{
+    text-align: center;
+    margin: 18px;
+
+}

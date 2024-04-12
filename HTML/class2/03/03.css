@@ -1,0 +1,35 @@
+*{
+    font-family: 'NanumBarunGothicYetHangul';
+}
+button{
+    width: 100px;
+    height: 40px;
+    background-color: dodgerblue;
+    color: white;
+    border: 0px;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 15px;
+}
+
+
+#bt3{
+    background-color: palevioletred;
+}
+#bt4{
+    background-color: yellowgreen;
+}
+
+button:hover, #btArea2 > button:hover{
+    background-color: brown;
+    color: white;
+    cursor: pointer;
+}
+h2{
+    font-size: medium;
+    color: blue;
+}
+
+.btGroup{
+    background-color: whitesmoke;
+}

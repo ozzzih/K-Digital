@@ -1,0 +1,42 @@
+
+.row{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.head{
+    background-color: hsl(30, 89%, 65%);
+}
+
+
+.row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    
+}
+
+
+
+.inrow{
+    margin-top: 10px;
+    
+    
+}
+
+select{
+    display: inline-flex;
+    width: 90%;
+    height: 30px;
+    margin-left: 0px;
+}
+
+input[type='number']{
+    display: inline-flex;
+    width: 80%;
+    height: 40px;
+    margin-left: 1px;
+}

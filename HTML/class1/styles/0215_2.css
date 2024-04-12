@@ -1,0 +1,26 @@
+* {
+    border: 1px solid black;
+}
+
+h1{
+    padding: 20px;
+    margin-bottom: 20px;
+    border-width: 5px;
+    border-style: dotted;
+    border-bottom: 1px dashed red;
+}
+p{
+    margin-top:30px;
+}
+.container{
+    background-color: #E6F9AF;
+    
+}
+.container-item{
+    display: inline-block;
+}
+.img{
+
+    height: 120px;
+    background-image: ;
+}
