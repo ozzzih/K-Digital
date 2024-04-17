@@ -28,10 +28,20 @@ response.setHeader("myName", "안중근");
 	for (String hName : headerNames){
 		String hValue = response.getHeader(hName);
 	%>
-	}
+	
 	<li><%= hName %> : <%= hValue %></li>
 	<%
 	}
 	%>
+	<h2>myNumber만 출력하기</h2>
+	<%
+	Collection<String> myNumber = response.getHeaders("myNumber");
+	for (String myNum : myNumber){
+	%>	
+		<li>myNumber : <%= myNum %></li>
+	<% 
+	}
+	%>
+	
 </body>
 </html>
