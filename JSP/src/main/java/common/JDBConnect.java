@@ -18,7 +18,7 @@ public class JDBConnect {
 		try {
 			Class.forName("com.mysql.cj.jdbc.Driver");
 			
-			String url="jdbc:mysql://localhost::3306/musthave";
+			String url="jdbc:mysql://localhost:3306/musthave";
 			String id = "user";
 			String pwd = "1234";
 			con = DriverManager.getConnection(url, id, pwd);
