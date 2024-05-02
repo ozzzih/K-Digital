@@ -41,11 +41,10 @@ public class ListController extends HttpServlet{
 		if(pageTemp != null && !pageTemp.equals(""))
 			pageNum = Integer.parseInt(pageTemp);
 		
-		int start = (pageNum - 1) * pageSize + 1;
-		int end = pageNum *  pageSize;
+		int start = (pageNum - 1) * pageSize;
+		//int end = pageNum *  pageSize;
 		map.put("start", start);
 		map.put("pageSize", pageSize);
-		
 		List<MVCBoardDTO> boardLists = dao.selectListPage(map);
 		
 		dao.close();
@@ -53,7 +52,7 @@ public class ListController extends HttpServlet{
 		String pagingImg = BoardPage.pagingStr(totalCount, pageSize, blockPage, pageNum, "../mvcboard/list.do");
 		map.put("pagingImg", pagingImg);
 		map.put("totalCount", totalCount);
-		map.put("pageSize", pageSize);
+		
 		map.put("pageNum", pageNum);
 		
 		req.setAttribute("boardLists", boardLists);

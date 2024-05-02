@@ -10,6 +10,76 @@ public class MVCBoardDAO extends JDBConnect{
 	public MVCBoardDAO() {
 		super();
 	}
+	public int updatePost(MVCBoardDTO dto) {
+		int result=0;
+		try {
+			String query="UPDATE mvcboard"
+						+ " SET title=?, content=?, ofile=?, sfile=? "
+						+ " WHERE idx=? and pass=?";
+			psmt=con.prepareStatement(query);
+			psmt.setString(1,  dto.getTitle());
+			psmt.setString(2, dto.getName());
+			psmt.setString(3, dto.getContent());
+			psmt.setString(4, dto.getOfile());
+			psmt.setString(5, dto.getSfile());
+			psmt.setString(6, dto.getIdx());
+			psmt.setString(7, dto.getPass());
+			
+			result=psmt.executeUpdate();
+		}
+		catch(Exception e) {
+			System.out.println("게시물 수정 중 예외 발생");
+			e.printStackTrace();
+		}
+		return result;
+	}
+	public boolean confirmPassword(String pass, String idx) {
+		boolean isCorr = true;
+		try {
+			String sql = "SELECT COUNT(*) FROM mvcboard WHERE pass=? AND idx=?";
+			psmt=con.prepareStatement(sql);
+			psmt.setString(1, pass);
+			psmt.setString(2,  idx);
+			rs=psmt.executeQuery();
+			rs.next();
+			if(rs.getInt(1)==0) {
+				isCorr=false;
+			}
+		}
+		catch(Exception e) {
+			isCorr=false;
+			e.printStackTrace();
+		}
+		return isCorr;
+	}
+	public int deletePost(String idx) {
+		int result=0;
+		try {
+			String query="DELETE FROM mvcboard WHERE idx=?";
+			psmt=con.prepareStatement(query);
+			psmt.setString(1, idx);
+			result=psmt.executeUpdate();
+		}
+		catch(Exception e) {
+			System.out.println("게시물 삭제 중 예외 발생");
+			e.printStackTrace();
+		}
+		return result;
+	}
+	
+	public void downCountPlus(String idx) {
+		String sql = "UPDATE mvcboard SET "
+					+ " downcount=downcount+1"
+					+ " WHERE idx=? ";
+		try {
+			psmt=con.prepareStatement(sql);
+			psmt.setString(1,  idx);
+			psmt.executeUpdate();
+		}
+		catch(Exception e) {
+			
+		}
+	}
 	public MVCBoardDTO selectView(String idx) {
 		MVCBoardDTO dto = new MVCBoardDTO();
 		String query = "SELECT * FROM mvcboard WHERE idx=?";
@@ -39,11 +109,11 @@ public class MVCBoardDAO extends JDBConnect{
 	public void updateVisitCount(String idx) {
 		String query="UPDATE mvcboard SET "
 					+" visitcount=visitcount+1 "
-					+" WEHRE idx=?";
+					+" WHERE idx=?";
 		try {
 			psmt=con.prepareStatement(query);
 			psmt.setString(1, idx);
-			psmt.executeQuery();
+			psmt.executeUpdate();
 		}catch(Exception e) {
 			System.out.println("게시물 조회수 증가 중 예외 발생");
 			e.printStackTrace();
@@ -93,22 +163,21 @@ public class MVCBoardDAO extends JDBConnect{
 	
 	public List<MVCBoardDTO> selectListPage(Map<String, Object> map){
 		List<MVCBoardDTO> board = new Vector<MVCBoardDTO>();
-		String query=" select * from mvcboard ";
-		if(map.get("searchWord")!=null) {
-			query+=" where "+map.get("searchField")
-				+" like '%" + map.get("searchWord")+ "%' ";
+		String query = "select * from mvcboard ";
+		if (map.get("searchWord") != null){
+			query += " WHERE " + map.get("searchField")
+			+ " LIKE '%" + map.get("searchWord") + "%' ";
 		}
-		query += " order by idx DESC limit ?,?";
+		query += " ORDER BY idx DESC limit ?,? ";
 		try {
-			psmt=con.prepareStatement(query);
+			psmt = con.prepareStatement(query);
 			psmt.setInt(1, (int)map.get("start"));
-			psmt.setInt(2,  (int)map.get("pageSize"));
-			
+			psmt.setInt(2, (int)map.get("pageSize"));
 			rs = psmt.executeQuery();
 			
 			while(rs.next()) {
 				MVCBoardDTO dto= new MVCBoardDTO();
-				dto.setName(rs.getString("name"));
+				dto.setIdx(rs.getString("idx"));
 				dto.setTitle(rs.getString("title"));
 				dto.setContent(rs.getString("content"));
 				dto.setPostdate(rs.getDate("postdate"));
@@ -127,4 +196,5 @@ public class MVCBoardDAO extends JDBConnect{
 		
 		return board;
 	}
+	
 }
