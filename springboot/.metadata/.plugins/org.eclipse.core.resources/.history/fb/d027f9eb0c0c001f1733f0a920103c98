@@ -1,0 +1,43 @@
+package com.rubypaper.domain;
+
+import java.util.Date;
+
+public class BoardVO {
+	private int seq;
+	private String writer;
+	private String content;
+	private Date createDate = new Date();
+	private int con=0;
+	public int getSeq() {
+		return seq;
+	}
+	public void setSeq(int seq) {
+		this.seq = seq;
+	}
+	public String getWriter() {
+		return writer;
+	}
+	public void setWriter(String writer) {
+		this.writer = writer;
+	}
+	public String getContent() {
+		return content;
+	}
+	public void setContent(String content) {
+		this.content = content;
+	}
+	public Date getCreateDate() {
+		return createDate;
+	}
+	public void setCreateDate(Date createDate) {
+		this.createDate = createDate;
+	}
+	public int getCon() {
+		return con;
+	}
+	public void setCon(int con) {
+		this.con = con;
+	}
+	
+	
+}

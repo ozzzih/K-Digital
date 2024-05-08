@@ -1,0 +1,13 @@
+package com.rubypaper.controller;
+
+@RestController
+public class BoardController {
+	public BoardController() {
+		System.out.println("===> BoardController 생성");
+	}
+	
+	@GetMapping("/hello")
+	public String hello(String name) {
+		return "Hello : " + name;
+	}
+}

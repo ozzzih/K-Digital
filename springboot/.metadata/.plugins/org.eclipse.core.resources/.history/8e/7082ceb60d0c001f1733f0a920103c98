@@ -1,0 +1,7 @@
+##WebApplication Type Setting
+spring.main.web-application-type=none
+
+##Banner Setting
+spring.main.banner-mode=off
+##Server Setting
+server.port=8080

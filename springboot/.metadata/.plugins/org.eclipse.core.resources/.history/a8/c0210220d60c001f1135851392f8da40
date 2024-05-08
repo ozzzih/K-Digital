@@ -1,0 +1,13 @@
+package edu.pnu.service;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import edu.pnu.domain.MemberVO;
+
+public class MemberService {
+	private List<MemberVO> list = new ArrayList<>();
+	public MemberService() {
+		
+	}
+}
