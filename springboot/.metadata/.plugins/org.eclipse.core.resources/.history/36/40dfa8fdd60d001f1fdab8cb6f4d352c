@@ -1,0 +1,22 @@
+package edu.pnu.controller;
+
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+
+import edu.pnu.service.MemberService;
+
+public class MemberController {
+	MemberService ms;
+	public MemberController(){
+		ms=new MemberService();
+	}
+	
+	@GetMapping("/member/{id}")
+	public ResponseEntity<?> getMember(@PathVariable Integer id){
+		if(id==null)
+			ResponseEntity.ok(ms.getAllMember());
+		return ResponseEntity.ok(ms.getMember(id));
+	}
+	
+}

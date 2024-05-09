@@ -1,0 +1,15 @@
+package edu.pnu.controller;
+
+public class MemberController {
+	public MemberController{
+		memberService=new MemberService();
+	}
+	
+	@GetMapping("/member/{id}")
+	public ResponseEntity<?> getMember(@PathVariable Integer id){
+		if(id==null)
+			memberService.getAllMember();
+		return null;
+	}
+	
+}

@@ -2,24 +2,84 @@ package edu.pnu.dao;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+import java.util.ArrayList;
+import java.util.List;
+
+import edu.pnu.domain.MemberVO;
 
 public class MemberDao {
-	public static Connection getConnection() { 
-		Connection conn = null;
-		try {
-			String url="jdbc:h2:tcp://localhost/~/.h2/sqlprg";
-			String username = "sa";
-			String password = "abcd ";
-			
-			Class.forName("org.h2.Driver");
-			Connection con = DriverManager.getConnection(url, username, password );
-			
+	private Connection conn;
+	
+	static String url="jdbc:h2:tcp://localhost/~/.h2/sqlprg";
+	static String username = "sa";
+	static String password = "abcd";
+	
+	public MemberDao() { 
+		try {			
+			conn = DriverManager.getConnection(url, username, password);
 			System.out.println("연결 성공");
-			con.close();
 		}
 		catch(Exception e) {
 			System.out.println("연결 실패");
+			e.printStackTrace();
 		}
-		return conn;
 	}
+	
+	public List<MemberVO> getAllMember(){
+		Statement st=null;
+		ResultSet rs = null;
+		List<MemberVO> list = new ArrayList<>();
+		try {
+			st = conn.createStatement();
+			rs=st.executeQuery("select * from member");
+			while(rs.next()) {
+				MemberVO m = MemberVO.builder().id(rs.getInt("id")).build();
+				list.add(m);
+			}
+		}catch(SQLException e) {
+			e.printStackTrace();
+		}finally {
+				try {
+					if(st!=null) st.close();
+					if(rs!=null) rs.close();
+				} catch (SQLException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+		}
+		return list;
+		
+	}
+	public MemberVO getMember(Integer id) {
+		PreparedStatement ps=null;
+		ResultSet rs = null;
+		MemberVO m =null;
+		try {
+			ps=conn.prepareStatement("select * from member where id=?");
+			ps.setInt(1, id);
+			rs=ps.executeQuery();			
+			
+			
+			if(rs.next()) {
+				m=MemberVO.builder().id(rs.getInt("id")).build();
+			}
+			
+		}catch(SQLException e) {
+			e.printStackTrace();
+		}finally {
+				try {
+					if(ps!=null) ps.close();
+					if(rs!=null) rs.close();
+				} catch (SQLException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+		}
+		return m;
+	}
+	
 }
