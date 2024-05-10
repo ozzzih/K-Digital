@@ -1,6 +1,7 @@
 package edu.pnu.dao;
 
 import java.sql.Connection;
+
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -9,24 +10,29 @@ import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.springframework.stereotype.Repository;
+
 import edu.pnu.domain.MemberVO;
+
 
 public class MemberDao {
 	private Connection conn;
 	
-	static String url="jdbc:h2:tcp://localhost/~/.h2/sqlprg";
-	static String username = "sa";
-	static String password = "abcd";
+	private String url="jdbc:h2:tcp://localhost/~/.h2/sqlprg";
+	private String username = "sa";
+	private String password = "abcd";
 	
 	public MemberDao() { 
+		
 		try {			
 			conn = DriverManager.getConnection(url, username, password);
-			System.out.println("연결 성공");
+			System.out.println("DAO생성");
 		}
 		catch(Exception e) {
 			System.out.println("연결 실패");
 			e.printStackTrace();
 		}
+		
 	}
 	
 	public List<MemberVO> getAllMember(){
