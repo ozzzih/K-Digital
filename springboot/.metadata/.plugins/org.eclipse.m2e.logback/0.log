@@ -1886,3 +1886,283 @@ Caused by: org.apache.maven.model.building.ModelBuildingException: 1 problem was
 2024-05-10 18:04:02,868 [Worker-117: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
 2024-05-10 18:04:02,877 [Worker-117: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
 2024-05-10 18:04:02,880 [Worker-117: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\k-digital\springboot\Mission03_1\src\test\resources
+2024-05-13 12:24:01,523 [Worker-2: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
+2024-05-13 12:36:19,388 [Worker-14: Building] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: edu.pnu:Mission03_1:0.0.1-SNAPSHOT @ C:\k-digital\springboot\Mission04\pom.xml.
+2024-05-13 12:36:20,451 [Worker-14: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-13 12:36:20,465 [Worker-14: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-05-13 12:36:20,469 [Worker-14: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\k-digital\springboot\Mission04\src\test\resources
+2024-05-13 12:36:21,680 [Worker-17: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-13 12:36:21,682 [Worker-17: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-05-13 12:36:21,684 [Worker-17: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\k-digital\springboot\Mission04\src\test\resources
+2024-05-13 12:39:32,347 [Worker-19: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-13 12:39:32,361 [Worker-19: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-05-13 12:39:32,367 [Worker-19: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\k-digital\springboot\Mission03\src\test\resources
+2024-05-13 12:41:52,944 [Worker-20: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-05-13 12:41:52,945 [Worker-20: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-05-13 12:41:52,947 [Worker-20: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\k-digital\springboot\Mission03\src\test\resources
+2024-05-13 12:42:47,660 [Worker-17: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-05-13 12:42:47,661 [Worker-17: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-05-13 12:42:47,664 [Worker-17: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\k-digital\springboot\Mission03\src\test\resources
+2024-05-13 12:48:54,964 [Worker-23: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-13 12:48:54,969 [Worker-23: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-05-13 12:48:54,971 [Worker-23: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\k-digital\springboot\Mission03\src\test\resources
+2024-05-13 12:48:55,024 [Worker-23: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-05-13 12:48:55,025 [Worker-23: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-05-13 12:48:55,026 [Worker-23: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\k-digital\springboot\Mission04\src\test\resources
+2024-05-13 12:49:00,842 [Worker-22: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-05-13 12:49:00,843 [Worker-22: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-05-13 12:49:00,848 [Worker-22: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\k-digital\springboot\Mission03\src\test\resources
+2024-05-13 12:49:00,873 [Worker-22: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-13 12:49:00,894 [Worker-22: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-05-13 12:49:00,897 [Worker-22: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\k-digital\springboot\Mission04\src\test\resources
+2024-05-13 12:49:03,672 [Worker-22: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-13 12:49:03,690 [Worker-22: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-05-13 12:49:03,694 [Worker-22: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\k-digital\springboot\Mission03\src\test\resources
+2024-05-13 12:49:03,744 [Worker-22: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-05-13 12:49:03,745 [Worker-22: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-05-13 12:49:03,746 [Worker-22: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\k-digital\springboot\Mission04\src\test\resources
+2024-05-13 12:50:59,069 [Worker-29: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-13 12:50:59,075 [Worker-29: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-05-13 12:50:59,078 [Worker-29: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\k-digital\springboot\Mission04\src\test\resources
+2024-05-13 12:55:40,993 [Worker-30: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-13 12:55:41,010 [Worker-30: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-05-13 12:55:41,013 [Worker-30: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\k-digital\springboot\Mission04\src\test\resources
+2024-05-13 13:01:17,116 [Worker-26: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-13 13:01:17,131 [Worker-26: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-05-13 13:01:17,134 [Worker-26: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\k-digital\springboot\Mission04\src\test\resources
+2024-05-13 13:07:18,639 [Worker-36: Launching Executing install in C__k-digital_springboot_Mission04] INFO  o.eclipse.m2e.core.internal.Bundles - getClasspathEntries(Bundle=org.eclipse.m2e.maven.runtime_3.9.600.20231203-1234 [354])
+2024-05-13 13:07:18,640 [Worker-36: Launching Executing install in C__k-digital_springboot_Mission04] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Devtools\sts-4.22.1.RELEASE\plugins\org.eclipse.m2e.maven.runtime_3.9.600.20231203-1234
+2024-05-13 13:07:18,640 [Worker-36: Launching Executing install in C__k-digital_springboot_Mission04] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Devtools\sts-4.22.1.RELEASE\plugins\org.eclipse.m2e.maven.runtime_3.9.600.20231203-1234\jars\aopalliance-1.0.jar
+2024-05-13 13:07:18,640 [Worker-36: Launching Executing install in C__k-digital_springboot_Mission04] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Devtools\sts-4.22.1.RELEASE\plugins\org.eclipse.m2e.maven.runtime_3.9.600.20231203-1234\jars\guice-5.1.0.jar
+2024-05-13 13:07:18,640 [Worker-36: Launching Executing install in C__k-digital_springboot_Mission04] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Devtools\sts-4.22.1.RELEASE\plugins\org.eclipse.m2e.maven.runtime_3.9.600.20231203-1234\jars\httpclient-4.5.14.jar
+2024-05-13 13:07:18,640 [Worker-36: Launching Executing install in C__k-digital_springboot_Mission04] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Devtools\sts-4.22.1.RELEASE\plugins\org.eclipse.m2e.maven.runtime_3.9.600.20231203-1234\jars\httpcore-4.4.16.jar
+2024-05-13 13:07:18,641 [Worker-36: Launching Executing install in C__k-digital_springboot_Mission04] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Devtools\sts-4.22.1.RELEASE\plugins\org.eclipse.m2e.maven.runtime_3.9.600.20231203-1234\jars\jansi-2.4.0.jar
+2024-05-13 13:07:18,641 [Worker-36: Launching Executing install in C__k-digital_springboot_Mission04] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Devtools\sts-4.22.1.RELEASE\plugins\org.eclipse.m2e.maven.runtime_3.9.600.20231203-1234\jars\jcl-over-slf4j-1.7.36.jar
+2024-05-13 13:07:18,641 [Worker-36: Launching Executing install in C__k-digital_springboot_Mission04] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Devtools\sts-4.22.1.RELEASE\plugins\org.eclipse.m2e.maven.runtime_3.9.600.20231203-1234\jars\maven-artifact-3.9.6.jar
+2024-05-13 13:07:18,641 [Worker-36: Launching Executing install in C__k-digital_springboot_Mission04] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Devtools\sts-4.22.1.RELEASE\plugins\org.eclipse.m2e.maven.runtime_3.9.600.20231203-1234\jars\maven-builder-support-3.9.6.jar
+2024-05-13 13:07:18,642 [Worker-36: Launching Executing install in C__k-digital_springboot_Mission04] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Devtools\sts-4.22.1.RELEASE\plugins\org.eclipse.m2e.maven.runtime_3.9.600.20231203-1234\jars\maven-compat-3.9.6.jar
+2024-05-13 13:07:18,642 [Worker-36: Launching Executing install in C__k-digital_springboot_Mission04] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Devtools\sts-4.22.1.RELEASE\plugins\org.eclipse.m2e.maven.runtime_3.9.600.20231203-1234\jars\maven-core-3.9.6.jar
+2024-05-13 13:07:18,642 [Worker-36: Launching Executing install in C__k-digital_springboot_Mission04] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Devtools\sts-4.22.1.RELEASE\plugins\org.eclipse.m2e.maven.runtime_3.9.600.20231203-1234\jars\maven-embedder-3.9.6.jar
+2024-05-13 13:07:18,642 [Worker-36: Launching Executing install in C__k-digital_springboot_Mission04] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Devtools\sts-4.22.1.RELEASE\plugins\org.eclipse.m2e.maven.runtime_3.9.600.20231203-1234\jars\maven-model-3.9.6.jar
+2024-05-13 13:07:18,642 [Worker-36: Launching Executing install in C__k-digital_springboot_Mission04] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Devtools\sts-4.22.1.RELEASE\plugins\org.eclipse.m2e.maven.runtime_3.9.600.20231203-1234\jars\maven-model-builder-3.9.6.jar
+2024-05-13 13:07:18,642 [Worker-36: Launching Executing install in C__k-digital_springboot_Mission04] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Devtools\sts-4.22.1.RELEASE\plugins\org.eclipse.m2e.maven.runtime_3.9.600.20231203-1234\jars\maven-plugin-api-3.9.6.jar
+2024-05-13 13:07:18,642 [Worker-36: Launching Executing install in C__k-digital_springboot_Mission04] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Devtools\sts-4.22.1.RELEASE\plugins\org.eclipse.m2e.maven.runtime_3.9.600.20231203-1234\jars\maven-repository-metadata-3.9.6.jar
+2024-05-13 13:07:18,642 [Worker-36: Launching Executing install in C__k-digital_springboot_Mission04] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Devtools\sts-4.22.1.RELEASE\plugins\org.eclipse.m2e.maven.runtime_3.9.600.20231203-1234\jars\maven-resolver-api-1.9.18.jar
+2024-05-13 13:07:18,642 [Worker-36: Launching Executing install in C__k-digital_springboot_Mission04] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Devtools\sts-4.22.1.RELEASE\plugins\org.eclipse.m2e.maven.runtime_3.9.600.20231203-1234\jars\maven-resolver-connector-basic-1.9.18.jar
+2024-05-13 13:07:18,643 [Worker-36: Launching Executing install in C__k-digital_springboot_Mission04] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Devtools\sts-4.22.1.RELEASE\plugins\org.eclipse.m2e.maven.runtime_3.9.600.20231203-1234\jars\maven-resolver-impl-1.9.18.jar
+2024-05-13 13:07:18,643 [Worker-36: Launching Executing install in C__k-digital_springboot_Mission04] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Devtools\sts-4.22.1.RELEASE\plugins\org.eclipse.m2e.maven.runtime_3.9.600.20231203-1234\jars\maven-resolver-named-locks-1.9.18.jar
+2024-05-13 13:07:18,643 [Worker-36: Launching Executing install in C__k-digital_springboot_Mission04] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Devtools\sts-4.22.1.RELEASE\plugins\org.eclipse.m2e.maven.runtime_3.9.600.20231203-1234\jars\maven-resolver-provider-3.9.6.jar
+2024-05-13 13:07:18,643 [Worker-36: Launching Executing install in C__k-digital_springboot_Mission04] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Devtools\sts-4.22.1.RELEASE\plugins\org.eclipse.m2e.maven.runtime_3.9.600.20231203-1234\jars\maven-resolver-spi-1.9.18.jar
+2024-05-13 13:07:18,643 [Worker-36: Launching Executing install in C__k-digital_springboot_Mission04] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Devtools\sts-4.22.1.RELEASE\plugins\org.eclipse.m2e.maven.runtime_3.9.600.20231203-1234\jars\maven-resolver-transport-file-1.9.18.jar
+2024-05-13 13:07:18,643 [Worker-36: Launching Executing install in C__k-digital_springboot_Mission04] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Devtools\sts-4.22.1.RELEASE\plugins\org.eclipse.m2e.maven.runtime_3.9.600.20231203-1234\jars\maven-resolver-transport-http-1.9.18.jar
+2024-05-13 13:07:18,643 [Worker-36: Launching Executing install in C__k-digital_springboot_Mission04] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Devtools\sts-4.22.1.RELEASE\plugins\org.eclipse.m2e.maven.runtime_3.9.600.20231203-1234\jars\maven-resolver-transport-wagon-1.9.18.jar
+2024-05-13 13:07:18,644 [Worker-36: Launching Executing install in C__k-digital_springboot_Mission04] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Devtools\sts-4.22.1.RELEASE\plugins\org.eclipse.m2e.maven.runtime_3.9.600.20231203-1234\jars\maven-resolver-util-1.9.18.jar
+2024-05-13 13:07:18,644 [Worker-36: Launching Executing install in C__k-digital_springboot_Mission04] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Devtools\sts-4.22.1.RELEASE\plugins\org.eclipse.m2e.maven.runtime_3.9.600.20231203-1234\jars\maven-settings-3.9.6.jar
+2024-05-13 13:07:18,644 [Worker-36: Launching Executing install in C__k-digital_springboot_Mission04] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Devtools\sts-4.22.1.RELEASE\plugins\org.eclipse.m2e.maven.runtime_3.9.600.20231203-1234\jars\maven-settings-builder-3.9.6.jar
+2024-05-13 13:07:18,644 [Worker-36: Launching Executing install in C__k-digital_springboot_Mission04] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Devtools\sts-4.22.1.RELEASE\plugins\org.eclipse.m2e.maven.runtime_3.9.600.20231203-1234\jars\maven-shared-utils-3.3.4.jar
+2024-05-13 13:07:18,644 [Worker-36: Launching Executing install in C__k-digital_springboot_Mission04] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Devtools\sts-4.22.1.RELEASE\plugins\org.eclipse.m2e.maven.runtime_3.9.600.20231203-1234\jars\org.eclipse.sisu.inject-0.9.0.M2.jar
+2024-05-13 13:07:18,644 [Worker-36: Launching Executing install in C__k-digital_springboot_Mission04] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Devtools\sts-4.22.1.RELEASE\plugins\org.eclipse.m2e.maven.runtime_3.9.600.20231203-1234\jars\org.eclipse.sisu.plexus-0.9.0.M2.jar
+2024-05-13 13:07:18,644 [Worker-36: Launching Executing install in C__k-digital_springboot_Mission04] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Devtools\sts-4.22.1.RELEASE\plugins\org.eclipse.m2e.maven.runtime_3.9.600.20231203-1234\jars\plexus-build-api-0.0.7.jar
+2024-05-13 13:07:18,644 [Worker-36: Launching Executing install in C__k-digital_springboot_Mission04] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Devtools\sts-4.22.1.RELEASE\plugins\org.eclipse.m2e.maven.runtime_3.9.600.20231203-1234\jars\plexus-cipher-2.0.jar
+2024-05-13 13:07:18,645 [Worker-36: Launching Executing install in C__k-digital_springboot_Mission04] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Devtools\sts-4.22.1.RELEASE\plugins\org.eclipse.m2e.maven.runtime_3.9.600.20231203-1234\jars\plexus-classworlds-2.7.0.jar
+2024-05-13 13:07:18,645 [Worker-36: Launching Executing install in C__k-digital_springboot_Mission04] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Devtools\sts-4.22.1.RELEASE\plugins\org.eclipse.m2e.maven.runtime_3.9.600.20231203-1234\jars\plexus-component-annotations-2.1.0.jar
+2024-05-13 13:07:18,645 [Worker-36: Launching Executing install in C__k-digital_springboot_Mission04] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Devtools\sts-4.22.1.RELEASE\plugins\org.eclipse.m2e.maven.runtime_3.9.600.20231203-1234\jars\plexus-interpolation-1.26.jar
+2024-05-13 13:07:18,645 [Worker-36: Launching Executing install in C__k-digital_springboot_Mission04] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Devtools\sts-4.22.1.RELEASE\plugins\org.eclipse.m2e.maven.runtime_3.9.600.20231203-1234\jars\plexus-sec-dispatcher-2.0.jar
+2024-05-13 13:07:18,645 [Worker-36: Launching Executing install in C__k-digital_springboot_Mission04] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Devtools\sts-4.22.1.RELEASE\plugins\org.eclipse.m2e.maven.runtime_3.9.600.20231203-1234\jars\plexus-utils-3.5.1.jar
+2024-05-13 13:07:18,645 [Worker-36: Launching Executing install in C__k-digital_springboot_Mission04] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Devtools\sts-4.22.1.RELEASE\plugins\org.eclipse.m2e.maven.runtime_3.9.600.20231203-1234\jars\wagon-file-3.5.3.jar
+2024-05-13 13:07:18,645 [Worker-36: Launching Executing install in C__k-digital_springboot_Mission04] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Devtools\sts-4.22.1.RELEASE\plugins\org.eclipse.m2e.maven.runtime_3.9.600.20231203-1234\jars\wagon-http-3.5.3.jar
+2024-05-13 13:07:18,645 [Worker-36: Launching Executing install in C__k-digital_springboot_Mission04] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Devtools\sts-4.22.1.RELEASE\plugins\org.eclipse.m2e.maven.runtime_3.9.600.20231203-1234\jars\wagon-http-shared-3.5.3.jar
+2024-05-13 13:07:18,645 [Worker-36: Launching Executing install in C__k-digital_springboot_Mission04] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Devtools\sts-4.22.1.RELEASE\plugins\org.eclipse.m2e.maven.runtime_3.9.600.20231203-1234\jars\wagon-provider-api-3.5.3.jar
+2024-05-13 13:07:18,646 [Worker-36: Launching Executing install in C__k-digital_springboot_Mission04] INFO  o.eclipse.m2e.core.internal.Bundles - getClasspathEntries(Bundle=com.google.guava_33.0.0.jre [27])
+2024-05-13 13:07:18,646 [Worker-36: Launching Executing install in C__k-digital_springboot_Mission04] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Devtools\sts-4.22.1.RELEASE\plugins\com.google.guava_33.0.0.jre.jar
+2024-05-13 13:07:18,646 [Worker-36: Launching Executing install in C__k-digital_springboot_Mission04] INFO  o.eclipse.m2e.core.internal.Bundles - getClasspathEntries(Bundle=slf4j.api_2.0.12 [584])
+2024-05-13 13:07:18,646 [Worker-36: Launching Executing install in C__k-digital_springboot_Mission04] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Devtools\sts-4.22.1.RELEASE\plugins\slf4j.api_2.0.12.jar
+2024-05-13 13:07:18,646 [Worker-36: Launching Executing install in C__k-digital_springboot_Mission04] INFO  o.eclipse.m2e.core.internal.Bundles - getClasspathEntries(Bundle=jakarta.inject.jakarta.inject-api_1.0.5 [44])
+2024-05-13 13:07:18,647 [Worker-36: Launching Executing install in C__k-digital_springboot_Mission04] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Devtools\sts-4.22.1.RELEASE\plugins\jakarta.inject.jakarta.inject-api_1.0.5.jar
+2024-05-13 13:07:18,647 [Worker-36: Launching Executing install in C__k-digital_springboot_Mission04] INFO  o.eclipse.m2e.core.internal.Bundles - getClasspathEntries(Bundle=jakarta.annotation-api_1.3.5 [40])
+2024-05-13 13:07:18,647 [Worker-36: Launching Executing install in C__k-digital_springboot_Mission04] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Devtools\sts-4.22.1.RELEASE\plugins\jakarta.annotation-api_1.3.5.jar
+2024-05-13 13:07:18,647 [Worker-36: Launching Executing install in C__k-digital_springboot_Mission04] INFO  o.eclipse.m2e.core.internal.Bundles - getClasspathEntries(Bundle=org.apache.commons.cli_1.6.0 [75])
+2024-05-13 13:07:18,647 [Worker-36: Launching Executing install in C__k-digital_springboot_Mission04] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Devtools\sts-4.22.1.RELEASE\plugins\org.apache.commons.cli_1.6.0.jar
+2024-05-13 13:07:18,647 [Worker-36: Launching Executing install in C__k-digital_springboot_Mission04] INFO  o.eclipse.m2e.core.internal.Bundles - getClasspathEntries(Bundle=org.apache.commons.commons-codec_1.16.0 [77])
+2024-05-13 13:07:18,647 [Worker-36: Launching Executing install in C__k-digital_springboot_Mission04] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Devtools\sts-4.22.1.RELEASE\plugins\org.apache.commons.commons-codec_1.16.0.jar
+2024-05-13 13:07:18,647 [Worker-36: Launching Executing install in C__k-digital_springboot_Mission04] INFO  o.eclipse.m2e.core.internal.Bundles - getClasspathEntries(Bundle=org.apache.commons.lang3_3.14.0 [81])
+2024-05-13 13:07:18,647 [Worker-36: Launching Executing install in C__k-digital_springboot_Mission04] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Devtools\sts-4.22.1.RELEASE\plugins\org.apache.commons.lang3_3.14.0.jar
+2024-05-13 13:07:18,647 [Worker-36: Launching Executing install in C__k-digital_springboot_Mission04] INFO  o.eclipse.m2e.core.internal.Bundles - getClasspathEntries(Bundle=com.google.guava.failureaccess_1.0.2 [29])
+2024-05-13 13:07:18,648 [Worker-36: Launching Executing install in C__k-digital_springboot_Mission04] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Devtools\sts-4.22.1.RELEASE\plugins\com.google.guava.failureaccess_1.0.2.jar
+2024-05-13 13:07:18,649 [Worker-36: Launching Executing install in C__k-digital_springboot_Mission04] INFO  o.e.m.i.launch.MavenLaunchDelegate - Run build in "C:\k-digital\springboot\Mission04":
+2024-05-13 13:07:18,652 [Worker-36: Launching Executing install in C__k-digital_springboot_Mission04] INFO  o.e.m.i.launch.MavenLaunchDelegate -  mvn  -Ppom.xml -B -Dstyle.color=always install
+2024-05-14 09:31:33,416 [Worker-48: Building] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: edu.pnu:Mission03:0.0.1-SNAPSHOT @ C:\k-digital\springboot\Mission05\pom.xml.
+2024-05-14 09:31:34,343 [Worker-48: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-14 09:31:34,354 [Worker-48: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-05-14 09:31:34,357 [Worker-48: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\k-digital\springboot\Mission05\src\test\resources
+2024-05-14 09:31:35,563 [Worker-39: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-14 09:31:35,564 [Worker-39: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-05-14 09:31:35,566 [Worker-39: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\k-digital\springboot\Mission05\src\test\resources
+2024-05-14 09:37:41,472 [Worker-39: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-14 09:37:41,492 [Worker-39: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-05-14 09:37:41,495 [Worker-39: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\k-digital\springboot\Mission03_1\src\test\resources
+2024-05-14 09:37:52,662 [Worker-53: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-14 09:37:52,676 [Worker-53: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-05-14 09:37:52,679 [Worker-53: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\k-digital\springboot\Mission03_1\src\test\resources
+2024-05-14 09:38:21,008 [Worker-39: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-14 09:38:21,017 [Worker-39: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-05-14 09:38:21,019 [Worker-39: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\k-digital\springboot\Mission03\src\test\resources
+2024-05-14 09:38:40,903 [Worker-51: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-14 09:38:40,907 [Worker-51: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-05-14 09:38:40,908 [Worker-51: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\k-digital\springboot\Mission03\src\test\resources
+2024-05-14 09:45:43,030 [Worker-53: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-14 09:45:43,035 [Worker-53: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-05-14 09:45:43,037 [Worker-53: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\k-digital\springboot\Mission03\src\test\resources
+2024-05-14 09:47:07,852 [Worker-56: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-14 09:47:07,857 [Worker-56: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-05-14 09:47:07,861 [Worker-56: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\k-digital\springboot\Mission03\src\test\resources
+2024-05-14 09:53:16,053 [Worker-39: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-14 09:53:16,056 [Worker-39: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-05-14 09:53:16,058 [Worker-39: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\k-digital\springboot\Mission03\src\test\resources
+2024-05-14 09:53:20,761 [Worker-57: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-14 09:53:20,764 [Worker-57: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-05-14 09:53:20,766 [Worker-57: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\k-digital\springboot\Mission03\src\test\resources
+2024-05-14 09:55:42,890 [Worker-59: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-14 09:55:42,893 [Worker-59: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-05-14 09:55:42,895 [Worker-59: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\k-digital\springboot\Mission03\src\test\resources
+2024-05-14 09:59:22,127 [Worker-62: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-14 09:59:22,130 [Worker-62: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-05-14 09:59:22,133 [Worker-62: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\k-digital\springboot\Mission03\src\test\resources
+2024-05-14 09:59:45,868 [Worker-53: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-14 09:59:45,871 [Worker-53: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-05-14 09:59:45,874 [Worker-53: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\k-digital\springboot\Mission03\src\test\resources
+2024-05-14 10:02:08,529 [Worker-61: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-14 10:02:08,537 [Worker-61: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-05-14 10:02:08,539 [Worker-61: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\k-digital\springboot\Mission03\src\test\resources
+2024-05-14 10:02:24,682 [Worker-53: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-14 10:02:24,685 [Worker-53: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-05-14 10:02:24,687 [Worker-53: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\k-digital\springboot\Mission03\src\test\resources
+2024-05-14 10:02:30,065 [Worker-61: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-14 10:02:30,067 [Worker-61: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-05-14 10:02:30,071 [Worker-61: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\k-digital\springboot\Mission03\src\test\resources
+2024-05-14 10:02:33,609 [Worker-61: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-14 10:02:33,616 [Worker-61: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-05-14 10:02:33,618 [Worker-61: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\k-digital\springboot\Mission03\src\test\resources
+2024-05-14 10:10:26,788 [Worker-63: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-14 10:10:26,794 [Worker-63: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-05-14 10:10:26,796 [Worker-63: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\k-digital\springboot\Mission03\src\test\resources
+2024-05-14 10:11:20,040 [Worker-64: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-14 10:11:20,046 [Worker-64: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-05-14 10:11:20,049 [Worker-64: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\k-digital\springboot\Mission03\src\test\resources
+2024-05-14 10:16:53,101 [Worker-69: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-14 10:16:53,107 [Worker-69: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-05-14 10:16:53,111 [Worker-69: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\k-digital\springboot\Mission03\src\test\resources
+2024-05-14 10:17:22,234 [Worker-70: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-14 10:17:22,239 [Worker-70: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-05-14 10:17:22,242 [Worker-70: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\k-digital\springboot\Mission03\src\test\resources
+2024-05-14 10:17:46,231 [Worker-64: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-14 10:17:46,237 [Worker-64: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-05-14 10:17:46,240 [Worker-64: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\k-digital\springboot\Mission03\src\test\resources
+2024-05-14 10:19:56,955 [Worker-73: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-14 10:19:56,958 [Worker-73: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-05-14 10:19:56,960 [Worker-73: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\k-digital\springboot\Mission03\src\test\resources
+2024-05-14 10:20:04,171 [Worker-64: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-14 10:20:04,175 [Worker-64: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-05-14 10:20:04,177 [Worker-64: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\k-digital\springboot\Mission03\src\test\resources
+2024-05-14 10:20:11,257 [Worker-75: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-14 10:20:11,265 [Worker-75: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-05-14 10:20:11,268 [Worker-75: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\k-digital\springboot\Mission03\src\test\resources
+2024-05-14 10:20:25,398 [Worker-74: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-14 10:20:25,400 [Worker-74: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-05-14 10:20:25,402 [Worker-74: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\k-digital\springboot\Mission03\src\test\resources
+2024-05-14 10:20:30,971 [Worker-73: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-14 10:20:30,974 [Worker-73: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-05-14 10:20:30,976 [Worker-73: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\k-digital\springboot\Mission03\src\test\resources
+2024-05-14 10:23:16,471 [Worker-75: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-14 10:23:16,477 [Worker-75: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-05-14 10:23:16,480 [Worker-75: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\k-digital\springboot\Mission03\src\test\resources
+2024-05-14 10:29:47,092 [Worker-80: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-14 10:29:47,099 [Worker-80: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-05-14 10:29:47,101 [Worker-80: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\k-digital\springboot\Mission03\src\test\resources
+2024-05-14 10:32:40,133 [Worker-78: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-14 10:32:40,142 [Worker-78: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-05-14 10:32:40,144 [Worker-78: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\k-digital\springboot\Mission03\src\test\resources
+2024-05-14 10:33:26,156 [Worker-73: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-14 10:33:26,158 [Worker-73: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-05-14 10:33:26,161 [Worker-73: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\k-digital\springboot\Mission03\src\test\resources
+2024-05-14 10:36:09,641 [Worker-81: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-14 10:36:09,647 [Worker-81: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-05-14 10:36:09,649 [Worker-81: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\k-digital\springboot\Mission03\src\test\resources
+2024-05-14 10:36:28,679 [Worker-82: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-14 10:36:28,685 [Worker-82: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-05-14 10:36:28,687 [Worker-82: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\k-digital\springboot\Mission03\src\test\resources
+2024-05-14 10:41:41,186 [Worker-83: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-14 10:41:41,194 [Worker-83: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-05-14 10:41:41,197 [Worker-83: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\k-digital\springboot\Mission03\src\test\resources
+2024-05-14 10:41:44,674 [Worker-83: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-14 10:41:44,678 [Worker-83: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-05-14 10:41:44,680 [Worker-83: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\k-digital\springboot\Mission03\src\test\resources
+2024-05-14 10:44:17,957 [Worker-88: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-14 10:44:17,965 [Worker-88: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-05-14 10:44:17,968 [Worker-88: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\k-digital\springboot\Mission03\src\test\resources
+2024-05-14 10:45:10,647 [Worker-73: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-14 10:45:10,652 [Worker-73: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-05-14 10:45:10,655 [Worker-73: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\k-digital\springboot\Mission03\src\test\resources
+2024-05-14 10:49:12,601 [Worker-89: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-14 10:49:12,604 [Worker-89: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-05-14 10:49:12,606 [Worker-89: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\k-digital\springboot\Mission03\src\test\resources
+2024-05-14 10:49:21,381 [Worker-73: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-14 10:49:21,383 [Worker-73: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-05-14 10:49:21,386 [Worker-73: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\k-digital\springboot\Mission03\src\test\resources
+2024-05-14 10:50:57,316 [Worker-84: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-14 10:50:57,322 [Worker-84: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-05-14 10:50:57,324 [Worker-84: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\k-digital\springboot\Mission03\src\test\resources
+2024-05-14 10:51:26,688 [Worker-87: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-14 10:51:26,693 [Worker-87: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-05-14 10:51:26,695 [Worker-87: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\k-digital\springboot\Mission03\src\test\resources
+2024-05-14 11:00:20,268 [Worker-90: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-14 11:00:20,280 [Worker-90: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-05-14 11:00:20,282 [Worker-90: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\k-digital\springboot\Mission03\src\test\resources
+2024-05-14 11:12:38,445 [Worker-99: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-14 11:12:38,449 [Worker-99: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-05-14 11:12:38,451 [Worker-99: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\k-digital\springboot\Mission03\src\test\resources
+2024-05-14 11:15:45,647 [Worker-106: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-14 11:15:45,650 [Worker-106: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-05-14 11:15:45,652 [Worker-106: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\k-digital\springboot\Mission03\src\test\resources
+2024-05-14 11:16:04,535 [Worker-106: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-14 11:16:04,538 [Worker-106: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-05-14 11:16:04,540 [Worker-106: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\k-digital\springboot\Mission03\src\test\resources
+2024-05-14 11:16:15,459 [Worker-106: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-14 11:16:15,462 [Worker-106: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-05-14 11:16:15,464 [Worker-106: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\k-digital\springboot\Mission03\src\test\resources
+2024-05-14 11:16:47,261 [Worker-101: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-14 11:16:47,266 [Worker-101: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-05-14 11:16:47,268 [Worker-101: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\k-digital\springboot\Mission03\src\test\resources
+2024-05-14 11:19:48,555 [Worker-108: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-14 11:19:48,561 [Worker-108: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-05-14 11:19:48,563 [Worker-108: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\k-digital\springboot\Mission03\src\test\resources
+2024-05-14 11:23:22,419 [Worker-111: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-14 11:23:22,427 [Worker-111: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-05-14 11:23:22,429 [Worker-111: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\k-digital\springboot\Mission03\src\test\resources
+2024-05-14 11:23:29,007 [Worker-111: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-14 11:23:29,011 [Worker-111: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-05-14 11:23:29,013 [Worker-111: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\k-digital\springboot\Mission03\src\test\resources
+2024-05-14 11:27:21,885 [Worker-116: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-14 11:27:21,892 [Worker-116: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-05-14 11:27:21,894 [Worker-116: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\k-digital\springboot\Mission03\src\test\resources
+2024-05-14 11:29:26,779 [Worker-114: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-14 11:29:26,785 [Worker-114: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-05-14 11:29:26,788 [Worker-114: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\k-digital\springboot\Mission03\src\test\resources
+2024-05-14 11:30:07,378 [Worker-102: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-14 11:30:07,382 [Worker-102: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-05-14 11:30:07,385 [Worker-102: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\k-digital\springboot\Mission03\src\test\resources
+2024-05-14 11:33:12,409 [Worker-118: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-14 11:33:12,415 [Worker-118: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-05-14 11:33:12,417 [Worker-118: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\k-digital\springboot\Mission03\src\test\resources
+2024-05-14 11:34:00,813 [Worker-120: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-14 11:34:00,816 [Worker-120: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-05-14 11:34:00,818 [Worker-120: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\k-digital\springboot\Mission03\src\test\resources
+2024-05-14 11:34:52,310 [Worker-102: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-14 11:34:52,320 [Worker-102: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-05-14 11:34:52,322 [Worker-102: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\k-digital\springboot\Mission03\src\test\resources
+2024-05-14 11:39:45,754 [Worker-122: Launching Mission03 - Mission03Application] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-14 11:39:45,766 [Worker-122: Launching Mission03 - Mission03Application] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-05-14 11:39:45,768 [Worker-122: Launching Mission03 - Mission03Application] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\k-digital\springboot\Mission03\src\test\resources
+2024-05-14 11:40:14,569 [Worker-110: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-14 11:40:14,573 [Worker-110: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-05-14 11:40:14,574 [Worker-110: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\k-digital\springboot\Mission03\src\test\resources

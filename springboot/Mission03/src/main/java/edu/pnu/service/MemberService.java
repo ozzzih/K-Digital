@@ -17,5 +17,14 @@ public class MemberService {
 	public MemberVO getMember(Integer id) {
 		return memberDao.getMember(id);
 	}
+	public MemberVO addMember(MemberVO membervo) {
+		return memberDao.addMember(membervo);
+	}
+	public int updateMember(MemberVO membervo) {
+		return memberDao.updateMembers(membervo);
+	}
+	public int deleteMember(Integer id) {
+		return memberDao.removeMember(id);
+	}
 	
 }
