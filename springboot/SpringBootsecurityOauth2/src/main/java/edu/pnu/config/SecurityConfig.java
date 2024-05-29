@@ -26,10 +26,13 @@ public class SecurityConfig {
 	SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
 		http.csrf(csrf->csrf.disable()); // CSRF 보호 비활성화
 		http.authorizeHttpRequests(auth->auth
-		.requestMatchers("/member/**").authenticated() 
-		.requestMatchers("/manager/**").hasAnyRole("MANAGER","ADMIN")
-		.requestMatchers("/admin/**").hasRole("ADMIN")
-		.anyRequest().permitAll());
+		//.requestMatchers("/member/**").authenticated() 
+		.requestMatchers("/public/**").permitAll()
+		.requestMatchers("/intra/marketing").hasAnyRole("ADMIN","MARKET")
+		.requestMatchers("/intra/develop").hasAnyRole("ADMIN","DEVELOP")
+		.requestMatchers("/intra/finance").hasAnyRole("ADMIN","FINANCE")
+		.requestMatchers("/admin/**").hasRole("ADMIN"));
+		
 		http.formLogin(frmLogin->frmLogin.disable()); // Form을 이용한 로그인을 사용하지 않겠다는 설정
 		http.httpBasic(basic->basic.disable()); // Http Basic인증 방식을 사용하지 않겠다는 설정
 		// 세션을 유지하지 않겠다고 설정 ➔ Url 호출 뒤 응답할 때 까지는 유지되지만 응답 후 삭제된다는 의미.

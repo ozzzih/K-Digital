@@ -6,8 +6,11 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class SecurityController {
 	@GetMapping("/") public String index() { return "index"; }
-	@GetMapping("/member") public String member() { return "member"; }
-	@GetMapping("/manager") public String manager() { return "manager"; }
+	@GetMapping("/public") public String pub() {return "public";}
+	@GetMapping("/intra/marketing") public String marketing() {return "marketing";}
+	@GetMapping("/intra/develop") public String develop() {return "develop";}
+	@GetMapping("/intra/finance") public String finance() {return "finance";}
 	@GetMapping("/admin") public String admin() { return "admin"; }
+
 }
 
